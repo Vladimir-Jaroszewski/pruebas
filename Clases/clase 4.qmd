@@ -1,0 +1,626 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Cuarta Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Indice"
+---
+
+# Introduccion al Modelo GCyD 
+
+## Primeras consideraciones
+
+Se trata de un modelo real de crecimiento que refleja la interrelación de los distintos agentes de la economía (familias, sector externo y gobierno).
+
+Se representa al modelo mediante ecuaciones de comportamiento, tecnológicas, de definición e institucionales.
+
+### Supuestos 
+- Ley de Walras: "Dada la existencia de n mercados, si n-1 mercados están en equilibrio, entonces el mercado n también lo estará".
+- Hay sector externo
+
+
+
+# El modelo bajo función Leontieff y regla de mark-up 
+## El modelo bajo función Leontieff
+
+\begin{block}{Produccion de tipo Leontieff}
+  \begin{equation}
+X = f(K,L,M) = \min \left\{ \frac{K}{a_k}, \frac{L}{a_L}, \frac{M_I}{a_m} \right\}
+  \end{equation}
+\end{block}
+
+Donde $(K,\ L,\ M_I)$ son los stocks de capital, mano de obra e importaciones intermedias, mientras que $(a_k, a_L, a_m)$ son los requerimientos tecnicos de produccion. 
+
+## El modelo bajo función Leontieff
+
+
+Dada la naturaleza oligopólica de los agentes la formación de precios puede establecerse mediante **la regla del mark-up**. Por lo que los precios están relacionados mediante una función con los factores productivos.
+
+### Supuestos adicionales:
+
+- Los insumos intermedios o materias primas son en su totalidad importados.
+- Coeficientes de producción fijos $\alpha_j$
+
+
+## Modelo en ecuaciones
+
+\vspace{0.3cm}
+
+\begin{block}{Ecuacion general de precios $P$}
+  \begin{equation}
+P=[a_L\ W (1+t_L)+a_m\ P_m](1+\theta)+\ t_v[a_L\ W +\theta(a_L\ W(1+t_l)+a_mP_m)]
+  \tag{1}
+  \end{equation}
+\end{block}
+
+
+Donde:
+
+-   $\alpha_j$: Estos coeficientes técnicos de producción.
+    - $\alpha_L$ es el de mano de obra por unidad de producto y
+    - $\alpha_m$ es el de insumos importados por unidad de producto.
+-   $W$: Son los salarios.
+-   $t_j$: Refiere a las alícuotas impositivas.
+    - $t_L$ la alícuota de aportes patronales y
+    - $t_v$ la alícuota del IVA
+- $P_m$: Es el precio de la materia prima importada.
+- $\theta$: Tasa de "mark-up" sobre los costos de la mano de obra y materias primas importadas.
+
+## Modelo en ecuaciones
+
+La expresión $(1)$ puede reescribirse como: 
+$$
+P=[a_L\ W (1+t_L)+a_m\ P_m]\ [1+\theta (1+t_v)]+ t_v\ \alpha_L\ W
+\tag{1'}
+$$ 
+
+Sea
+
+- $t$ el tipo de cambio.
+- $t_m$ los aranceles a las importaciones.
+
+
+
+## Modelo en ecuaciones
+
+\begin{block}{La demanda de factores productivos:}
+  \begin{equation}
+L=a_L X
+\tag{2}
+  \end{equation}
+  \begin{equation}
+K=b_K X
+\tag{3}
+  \end{equation}
+\end{block}
+
+
+Las demandas de factores productivos $K$ y $L$ en relacion al producto de la economía mediante un **coeficiente fijo** determina que \fbox{la elasticidad de sustitucion entre $L$ y $K$ es cero.\footnote{Supuesto del modelo de tipo leontieff.}}
+
+
+
+## Modelo en ecuaciones 
+
+El nivel de capital $K$ esta determinado por $K=K_n+K_m$.
+
+EL capital de origen nacional: $$K_n=b_n K \tag{4} $$
+
+El capital importado: 
+$$K_m=b_m K \tag{5}$$
+
+Relaciones respecto a la demanda de factores productivos:
+
+-   $b_k= K/X$ es la relacion k-producto.
+-   $b_n=K_n/K$
+-   $b_m=K_m/K$
+
+Por lo que el precio del capital es: 
+
+$$
+P_K=b_nP_n+b_mP_m 
+\tag{6}
+$$
+
+
+# Regla de mark-up
+
+## Determinacion del Mark-up
+
+<!--Nose de donde sale la formula del mark-up-->
+
+El mark-up se refiere al margen de beneficios.
+
+$$
+\begin{aligned}
+P_KK(r+d)&=\theta[a_lW(1+t_L)+a_mP_m]X\\
+(r+d)&= \frac{\theta\ a_L[W(1+t_L)+a_m\ P_m]}{P_K}\ K
+\end{aligned}\tag{7}
+$$ 
+
+Donde:
+
+- $r$ es la rentabilidad neta del stock de capital.
+- $d$ es la tasa de depreciación exogena.
+- Por lo que $(r+d)$ es la tasa de rentabilidad bruta del capital.
+
+
+## Ecuaciones del Modelo
+
+Recordemos la ecuación del producto en términos reales: 
+
+$$
+X=C+I+G+\Delta\ S+XN \tag{8}
+$$
+
+Si $(8)$ es en terminos reales multiplicando por $P$ obtenemos el producto Nominal: 
+
+$$
+PX=PC+PI+PG+P \Delta\ S+P\ XN \tag{8'}
+$$
+en la ecuacion $(8')$ se pueden suponer exogenos a $G, \Delta S$ y alternativamente las exportaciones $E$.
+
+## Ecuaciones del Modelo
+
+La ecuacion de la inversion queda definida: 
+
+$$
+I=(g+d)\ K_n \tag{9}
+$$ 
+
+Tal que:
+
+- $d$ es la tasa de depreciacion del capital.
+- $g$ es la tasa de inversión neta en capital nacional.
+- $K_n$ es el stock de capital nacional.
+
+
+Notese que la ecuacion $(9)$ representa los animals spirits keynesianos.
+
+## Ecuaciones del Modelo
+
+\begin{block}{Consumo de la sociedad:}
+  \begin{equation}
+C=C_0+c_w\ Y_{dw}+c_p\ Y_{dp}
+\tag{10}
+  \end{equation}
+\end{block}
+
+Tal que: \fbox{$c_w+c_p=1$} y \fbox{$c_w > c_p$}
+
+Donde:
+
+- $C_0$ es el consumo autónomo.
+- $c_w$ es la propensión marginal a consumir de los asalariados.
+- $c_p$ es la propensión marginal a consumir de los no asalariados.
+- $Y_{dw}$ es el ingreso disponible de los asalariados.
+- $Y_{dp}$ es el ingreso disponible de los no asalariados.
+
+
+La ecuación $(10)$ es la función de consumo privada, con estructura "Kaldoriana", es decir, el consumo de la sociedad depende del ingreso disponible de asalariados y no asalariados.
+
+## Ecuaciones del Modelo
+
+El consumo esta compuesto por el consumo nacional y el importado $C=C_n+C_m$
+
+$$
+P\ C_n=c_n\ C
+\tag{11}
+$$ $$
+P_{mc}\ C_m=c_m\ C
+\tag{12}
+$$ 
+
+Donde:
+
+- $C_m$ es el consumo privado en términos reales
+- $P_{mc}$ es el precio de bienes de consumo importados
+
+
+## Ecuaciones del Modelo
+
+Podemos definir al ingreso de los asalariados como: 
+
+$$
+Y_w=(1-t_{wl})W\ a_L\ X
+\tag{13}
+$$ 
+
+
+El ingreso de los no asalariados es:
+
+$$
+\begin{aligned}
+Y_p=\ &\Theta\ [a_L\ W (1+t_L)+ a_m\ P_m](X-E)+\\ 
+&E\ [P^*_E\ (1-t_s)\ t- a_L\ W (1-t_L)- a_m\  P_m]
+\end{aligned} \tag{14}
+$$
+
+Donde:
+
+- $t_{wl}$ es el impuesto al trabajo
+- $t_L$ es el impuesto al trabajo de los no asalariados
+- $t_{s}$ son las retenciones a las exportaciones
+- $P^*_{E}$ es el precio de las exportaciones
+
+
+## Ecuaciones del Modelo
+
+
+Notese que el $Y_p$ es distinto en el mercado interno al del mercado internacional, dado que para que sean iguales debe darse: $P=P^*_E (1-t_s)t$ , ademas debiera existir perfecto arbitraje.
+
+Tanto los asalariados como no asalariados son gravados con el impuesto a las ganancias.
+
+$$
+T_w=t_w Y_w
+\tag{15}
+$$
+
+$$
+T_p=t_p Y_p
+\tag{16}
+$$
+
+Donde: 
+
+- $t_w$ es la alícuota a los asalariados. 
+- $t_p$ es la alícuota a los no asalariados.
+
+
+## Ingresos disponibles
+
+El ingreso disponible de los asalariados se obtiene de quitar al ingreso bruto $Y_w$ los impuestos directos $T_w$ y agregar las transferencias $R$. 
+
+$$
+Y_{dw}= Y_w -T_w + R
+\tag{17}
+$$
+
+Para obetener el ingreso disponible de los no asalariados, hay que deducir del ingreso bruto $Y_p$, los impuestos directos $T_p$, los intereses de deuda externa $(DE_p\  i_{ext})$, las depreciaciones de capital $(d\ K\ P_K)$ y agregar los intereses que cobran por deuda interna $(DI\ i_{int})$:
+
+$$
+Y_{dp} = Y_p - T_p - DE_p\ i_{ext} + DI\ i_{int} - d\ K\ P_K
+\tag{18}
+$$
+
+## Ecuaciones del Capital
+
+Existe una ecuación de movimiento del capital:
+
+$$
+K (t + 1) = (1-d)\ K(t) +I + M_k
+\tag{19}
+$$
+
+## Ecuaciones del sector externo
+
+Los Precios de los bines intermedios $P_m$ y lo de bienes de capital $P_{mk}$ se definen como:
+
+$$
+P_m = P^*_m\ (1+ t_m)\ t
+\tag{20}
+$$
+
+$$
+P_{mk} = P^*_{mk}\ (1+ t_k)\ t
+\tag{21}
+$$
+
+Donde: 
+
+- $P^*_m$ es el precio internacional de bienes intermeedios
+- $P^*_{mk}$ es el precio internacional de bienes de capital
+- $t_{m}$ son los aranceles a la importacion
+- $t_k$ son los aranceles sobre bienes de capital
+
+## Ecuaciones del sector externo
+
+Esta compuesto por bienes de consumo, intermedios y de capital.
+
+Las cantidades de bienes intermedios $M_I$ y de capital $M_k$ se definen de la siguiente manera:
+
+\begin{align}
+M_I &= a_m X \tag{22} \\
+M_k &= (d+g) K_m \tag{23}
+\end{align}
+
+
+mientras que el precio de los bienes de consumo importados viene definido por:
+
+$$
+P_c = P^*_c (1+t_c)\ t
+\tag{24}
+$$
+
+Donde:
+
+- $a_m$ es el requerimiento de bienes importados.
+- $P^*_c$ es el precio en moneda extranjera de los bienes de consumo.
+- $t_c$ son los aranceles a los bienes de consumo.
+
+## Ecuaciones del sector externo
+
+\begin{block}{Balanza en cuenta corriente:}
+  \begin{equation}
+B = E^*\ P^*_E\ -\ M^*_I\ P^*_{m}\ -\ M^*_k\ P^*_{Km}\ -\ M^*_c\ P^*_c\ -\ i_{ext}\ (DE_p + DE_G)\ -\ T_f
+\tag{25}
+  \end{equation}
+\end{block}
+
+Donde:
+
+- $E^*$ son las exportaciones en moneda extrajera y $P^*_E$ su precio.
+- $M^*_I$ son las importaciones de bienes intermedios y $P^*_m$ su precio.
+- $M^*_c$ es la importación de bienes de consumo y $P^*_c$ su precio.
+- $DE_p$ es la deuda externa privada, y $DE_G$ es la deuda externa del gobierno.
+- $i_{ext}$ son los intereses externos
+- $T_f$ son las transferencias reales de servicios.
+
+## Ecuaciones del sector externo
+
+\begin{block}{Balanza en cuenta corriente:}
+  \begin{equation}
+B = E^*\ P^*_E\ -\ M^*_I\ P^*_{m}\ -\ M^*_k\ P^*_{Km}\ -\ M^*_c\ P^*_c\ -\ i_{ext}\ (DE_p + DE_G)\ -\ T_f
+\tag{25}
+  \end{equation}
+\end{block}
+
+Esta ecuación esta expresada en moneda extranjera, representando la restricción externa de la economía. El nivel de actividad de la economía estará estrechamente relacionada con la capacidad de importar bienes intermedios y de capital.
+
+Notese que a través de esta ecuación puede observarse los efectos en la variación de los términos de intercambio o la tasa de interés externa.
+
+## Ahorro del gobierno
+
+$$
+\begin{aligned}
+SG = &(P - P*_E\ t) E\ + T_p\ + T_w +\ t\ M^*_I\ P^*_m + t\ M^*_k\ P^*_k\ + \\
+& t_v \theta\ [a_L W (1 + t_L)\ +\ a_m P_m]\ + a_L W\ X + t_L\ a_L W X\ + \\  
+& t_{wl}\ a_L W X  -\ R - P_G - i_{ext}\ DE_{sg}\ t - i_{int}\ DE_{int}  - L_{sg} W
+\end{aligned}
+\tag{26}
+$$
+
+Donde: 
+
+- $L_{sg}$ es el empleo gubernamental
+
+## Equilibrio macroeconomico: S = I
+
+El ahorro privado es:
+
+$$
+SP = Y_{dw} + Y_{dp} - C_o - c_w Y_{dp} = -\ C_o + s_w\ Y_{dw} + s_p\ Y_{dp}
+\tag{27}
+$$
+
+Donde:
+
+- $s_w$ y $s_p$ son las propensiones marginales a ahorrar de los asalariados y no asalariados.
+
+## Equilibrio macroeconomico
+
+El ahorro total de la economia esta compuesto por el ahorro privado, el ahorro del gobierno y el ahorro del resto del mundo $(t\ B$. La suma de los ahorro debe ser igual a la inversion total.
+$$
+SP + SG - t\ B = PI + P_{mk}\ M_k +P\ \Delta S
+\tag{28}
+$$
+
+Notese que la inversión total es la suma de las inversión nacional $I$, de la importación de bienes de capital y de la variación de existencias.
+
+# Solución del modelo de crecimiento y distribución.
+
+## Resolución bajo el modelo de Tinbergen : 1 periodo.
+
+Este modelo debe ser resuelto para un período base y luego actualizando las
+variables predeterminadas como stock de capital nacional e importado y deudas
+externa e interna y proyectando los valores exógenos se pueden obtener soluciones
+para "n" períodos.
+
+El objetivo del modelo es proyectar la trayectoria de las principales variables
+macroeconómicas de la economía, Producto, empleo, cuentas fiscales, balanza de
+pagos, etc.
+
+## Resolución bajo el modelo de Tinbergen : 1 periodo.
+
+Es un modelo de política económica cuantitativa, de objetivos fijos, hay variables
+exógenas, endógenas (de interés de política), de cierre del modelo (ejemplo mark-up).
+
+Entonces, previamente a determinar las reglas de "cierre" del modelo es necesario definir las siguientes variables exógenas:
+
+a) \underline{Dependientes del Mercado Mundial:} se incluye la tasa de interés externa $i_{ext}$, el precio de las exportaciones $P_E$, el precio de las importaciones $P_m$, $P_{mk}$ y $P_c$, y las transferencias reales $T_f$.
+
+b) \underline{Instrumentos de Política Económica:} se consideran los gastos del gobierno $G$, las transferencias provisionales $R$, los impuestos a las transacciones internacionales $t_m$, $t_{mk}$ y $t_c$, las alícuotas  $t_v$, $t_L$, $t_{w,L}$, $t_w$, $t_p$, el número de empleados del gobierno $L_{sg}$, el salario $W$, el tipo de cambio $t$, las retenciones $t_s$ y el interés $i_{int}$.
+
+## Resolución bajo el modelo de Tinbergen : 1 periodo.
+
+c) \underline{Predeterminadas:} son el stock de capital al principio del período $K(t)$, el stock existente de la deuda externa $DI(t)$ y la deuda externa $DE_p(t)$ y $DE_{sg}(t)$, respectivamente;
+
+d) \underline{De cierre del modelo:} este modelo tiene en total **57 variables** y **28 ecuaciones**, por lo que para determinar su solución deberán definirse 29 variables, 25 de las cuales son exógenas. Por lo tanto, se requieren **4 variables de cierre**. 
+
+**Si consideramos como variables de cierre** a $G$ (el deseo de invertir de los empresarios), $\Delta S$ (variación de los inventarios), $E$ (exportaciones), y la tasa de mark-up $\theta$. De esta manera quedarían 28 ecuaciones y 28 variables endógenas, permitiendo su resolución.
+
+# Extensión del modelo de crecimiento a una función Cobb-Douglas
+
+## Modelo con función de producción Cobb-Douglas
+
+Se puede considerar alternativamente que la elasticidad de sustitución entre
+factores es diferente de cero, aproximándose a un "mundo" más neoclásico, en el que
+los cambios en los precios relativos entre factores de la producción afectan a la
+proporción utilizada entre factores primarios e intermedios.
+
+## Modelo con función de producción Cobb-Douglas
+
+\begin{block}{funcion de produccion Cobb-Douglas}
+Aquí el nivel de producto sera función del capital, de la mano de obra y los insumos intermedios: 
+  \begin{equation}
+X = \varepsilon  K^{\Omega} L^{\phi} M^{\tau}
+\tag{29}
+  \end{equation}
+\end{block}
+
+Donde $\phi + \Omega + \tau = 1$ bajo rendimientos constantes de escala. Y $\varepsilon$ es una constante que indica los cambios tecnológicos. 
+
+## Resolución del modelo Cobb-Douglas
+
+Para obtener la demanda de factores productivos es necesario maximizar la funcion de beneficios $Z$:
+
+$$
+Z= PX - W\ (1+t_L)L+P_k\ (r+d)K-P_m\ M_I
+$$
+
+Reemplazando $X$ por la funcion de produccion $(29)$
+
+$$
+\Rightarrow Max_{(K,L,M_I)}\ Z= P\ [\varepsilon  K^{\Omega} L^{\phi} M^{\tau}] - W\ (1+t_L)L+P_k\ (r+d)K-P_m\ M_I
+$$ 
+
+obtenemos la demanda de insumos.
+
+## Resolución del modelo Cobb-Douglas
+
+La demanda de importaciones de bienes intermedios es:
+$$
+M_I = \frac{\tau\ P X}{P_m}
+\tag{24 b}
+$$
+
+La demanda de mano de obra:
+
+$$
+L = \frac{\phi\ P X}{W (1 + t_L)}
+\tag{2 b}
+$$
+
+La demanda de capital
+
+$$
+K = \frac{\Omega\ P X}{P_k\ (r + d)}
+\tag{3 b}
+$$
+
+## Resolución del modelo Cobb-Douglas
+
+
+Reemplazando las ecuaciones $(24\ b)$, $(2\ b)$  y $(3\ b)$ en $(29)$, obtenemos el nivel general de precios.
+
+$$
+P =\frac{1}{\varepsilon} \left[ \frac{W (1 + t_L)}{\phi} \right]^\phi \left[ \frac{P_k\ (r + d)}{\Omega} \right]^\Omega \left[ \frac{P_m}{\tau} \right]^\tau
+\tag{1 b}
+$$
+
+La formación de ingreso de asalariados y no asalariados debe ser redefinida respecto a $(13)$ y $(14)$:
+
+$$
+Y_w = (1+t_w)\ L\ W
+\tag{14 b}
+$$
+
+
+
+$$
+Y_p = (r + d)\ K\ P_k
+\tag{15 b}
+$$
+
+# Modelo global de crecimiento y distribución - Extensión Financiera
+
+## Extensión Financiera
+
+### ¿Cómo relacionar el modelo real con uno financiero?
+Hay que pasar del ahorro neto financiero a incorporar el Sector
+financiero.
+
+## Extensión Financiera
+
+El ahorro financiero neto del sector publico puede definirse como: 
+
+$$
+SG- I_G\ hg
+\tag{26 c}
+$$
+
+El ahorro financiero neto del sector privado puede definirse como: 
+
+$$
+SP- I_p\ (1-hg)-P\ \Delta S
+\tag{27 c}
+$$
+
+Donde: 
+
+- $SG$ es el ahorro publico de la ecuacion $(26)$ y $SP$  es el ahorro privado de la ecuación $(27)$.
+- $I_p$ es la inversión privada, mientras que $I_G$ es la inversión publica.
+- $hg = \frac{I_G}{inversion \ \ total}$
+
+## Extensión Financiera
+
+El ahorro financiero privado tiene 3 asignaciones:
+
+i. Adquirir bonos de deuda interna $\rightarrow$ $\Delta DI$
+ii. Adquirir bonos de deuda externa $\rightarrow$ $\Delta DE_p$
+iii. Aumentar las tenencias de dinero $\rightarrow$ $\Delta M$
+
+El ahorro financiero publico tiene 2 asignaciones:
+
+i. Emisión de dinero interna $\rightarrow$ $\Delta M^s$
+ii. Emisión de dinero externa $\rightarrow$ $\Delta LCB$
+
+## Extensión Financiera
+
+De acuerdo a las asignaciones del ahorro del gobierno la ecuación $(26 c)$ queda:
+
+$$
+SG- I_G\ hg = -(\Delta\ DI +t\ \Delta\ DE^*_G + \Delta LCB ) 
+\tag{28}
+$$
+
+De acuerdo a las asignaciones del ahorro privado la ecuación $(27 c)$ queda:
+
+$$
+SP- I_p\ (1-hg)-P\ \Delta S\ - \Delta SP = \Delta DI + \Delta M\ \pm t\ \Delta DE_p
+\tag{29}
+$$
+
+## Extensión Financiera
+
+La deuda interna en terminos reales queda determinada de la siguiente manera:
+
+$$
+DI(t) = DI(t) \left[ \frac{1+i_{int}}{1+\pi} \right]^\sigma
+\tag{30}
+$$
+
+La deuda externa queda determinada de la siguiente manera:
+
+$$
+DE^{(t)}_p = DE^{(t-1)}_p \left[ \frac{1+i_{int}}{1+i_{ext}} \right]^\sigma
+\tag{31}
+$$
+
+Mientras que la cantidad de saldos monetarios reales es:
+
+$$
+\frac{M}{P}=ky-hi
+\tag{32}
+$$
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

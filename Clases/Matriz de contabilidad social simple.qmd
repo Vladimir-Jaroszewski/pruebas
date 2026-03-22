@@ -1,0 +1,220 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Matrices de Contabilidad Social (SAM)"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Índice"
+---
+
+# Matrices de Contabilidad Social
+
+## La matriz de contabilidad social - SAM
+
+Estructura de una SAM 
+
+  1. Matriz Cuadrada. 
+
+  2. Cada cuenta es representada por una fila y una columna.
+
+  3. Recopila información de la producción y los ingresos generados por los distintos agentes
+institucionales y acerca del gasto de dichos agentes.
+
+  4. El número de filas y columnas es flexible dependiendo de la economía en cuestión y el
+propósito de su constitución. 
+
+  5. Cada celda describe los pagos desde la cuenta de la columna a la cuenta de la fila.
+
+  6. Los ingresos de la cuenta aparecen en la fila y los gastos en la columna.
+
+## La matriz de contabilidad social - SAM (cont.)
+
+7. Opera el principio de contabilidad de doble entrada: 
+
+*Total de ingresos (suma de filas) = Total de gastos (suma de columnas)*
+
+8. Concepción de la SAM como una representación tabular de identidades contables. Donde los ingresos deben ser igual a los gastos para todos los sectores de la economía. 
+  
+9. Surgen identidades macroeconómicas
+
+
+\begin{block}{Fuentes}
+Cuentas Nacionales, Matrices de Insumo-Producto, Estadísticas Varias, Balanza de Pagos, etc
+\end{block}
+
+
+Consistencia en la información y en las cuentas macroeconímicas.
+
+## SAM simple
+
+![](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\sam_simple.PNG)
+
+
+## SAM simple
+
+Las dos primeras reglas de contabilidad para las SAM:
+
+a. Cada entrada a lo largo de una fila debe ser valuada al mismo precio
+
+b. Las sumas de las filas y columnas deben ser iguales
+
+
+
+\begin{block}{Utilización:}
+Columna 1: Totaliza los costos de producción del valor de la producción (producto) $PX$:
+\begin{itemize}
+  \item Costos Intermedios = $a PX$
+  \item Costos Salariales = $w bX$
+  \item Ganancias = $\pi X$
+\end{itemize}
+\end{block}
+
+
+Donde: 
+
+- $bX$ = empleo (L)
+- $w$ = salario promedio
+- $\pi$ = tasa de ganancia.
+
+
+##  Ecuaciones
+
+- Columna (1), se obtiene el producto mediante la suma de los ingresos:
+$$
+PX = aPX + wbX + \pi PX
+\tag{1}
+$$
+$$
+PX - aPX = wbX + \pi PX
+\tag{1'}
+$$
+
+Siendo el Valor agregado (VA), igual a la suma de las remuneraciones de los factores productivos:
+
+$$
+VA = (1-a)PX = wbX + \pi PX = Y_w + Y_m
+\tag{2}
+$$
+
+- La fila (A) Totaliza los usos del producto:
+
+$$
+PX = aPX + PC + PI
+\tag{3}
+$$
+$$
+I = IBF +/- VE 
+$$
+La igualdad Ahorro=Inversión en este caso se convierte en:
+
+$$
+S \pi - PI = 0 
+$$
+
+
+## Ecuaciones (Cont.)
+
+- Columna (2) representa a la unidad económica de los asalariados, y utilizando la igualdad con la fila (B):
+
+$$
+PC = WbX
+$$
+Operando, obtenemos la ecuación del consumo: 
+$$C = \frac WP bX $$
+
+Definimos al salario real $(m)$ como: $\frac WP=m$
+
+Por lo que el consumo:
+$$C=m\ bX
+\tag{4}$$
+
+## Ecuaciones (Cont.)
+
+Sustituyendo a (4) en la Fila A (3):
+
+$$
+aPX + Pm\ bX + PI = PX
+$$
+Y operando:
+
+$$
+PI = PX-aPX - PmbX
+$$
+$$
+PI = (1-a-mb) X
+$$
+
+Obtenemos la ecuación de la inversion: 
+
+$$
+I = (1-a-mb)X
+$$
+
+## Ecuaciones (Cont.)
+
+Despejando el producto real $(X)$:
+
+$$
+X= \frac 1{(1-a-mb)} I =\frac I\pi
+$$
+
+Donde:
+
+- $(1-a-mb)$ es el valor agregado en términos de la producción de los no asalariados, es decir, la tasa de ganancias.
+
+La columna (3) por su parte representa el porcentaje que ganancias que se destinan la ahorro, por lo que financiar a la inversión, de la columna (4):
+
+$$
+s\pi = PI
+$$
+Siendo la columna (4) la de formación del capital.
+
+## Ecuaciones (Cont.)
+
+Para continuar el análisis por filas tenemos a la fila (B) donde se registran los ingresos de los asalariados $Y_W= WbX$. Mientra que en la fila (C) se computan el ingreso de los NO asalariados $Y_\pi= \pi PX$.
+
+En este caso de SAM simple se suele suponer que todo el ingresos de los asalariados va totalmente al consumo:
+$$
+WbX=PC
+$$
+
+Mientras que los NO asalariados, se supone que todo su ingreso es ahorrado, financiando a la inversión:
+
+\begin{align*}
+&s\pi = Y_\pi\\
+&s\pi-PI=0
+\end{align*}
+
+
+## Implicancias de las cuentas
+
+1.  Encarna flujo circular de la Economía (Schumpeter)
+
+El valor del producto se descompone entre consumos intermedios, salarios y beneficios. (Tipos de producción)
+
+2. Salarios y beneficios generan demandas de consumo final, compras intermedias y formación de capital.
+
+3. La inversión es financiada por las empresas
+
+$$
+s \pi - PI = 0 
+$$
+
+## SAM ampliada
+
+**Extensión**
+
+***Actores Económicos***
+
+Asalariados, Rentistas, Empresas, Sistema Bancario, Gobierno y Resto del Mundo.
+
+Filas - Ingresos
+Columnas - Gastos 
+Flujo de Fondos 
+
+1) Producción
+2) Distribución Funcional
+3) Representantes Institucionales

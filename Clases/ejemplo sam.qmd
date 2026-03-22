@@ -1,0 +1,103 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Matrices de Contabilidad Social (SAM)"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Índice"
+---
+
+# Matrices de Contabilidad Social
+
+## La matriz de contabilidad social - SAM
+
+Estructura de una SAM 
+
+1. Matriz Cuadrada. 
+2. Cada cuenta es representada por una fila y una columna.
+3. Recopila información de la producción y los ingresos generados por los distintos agentes
+   institucionales y acerca del gasto de dichos agentes.
+4. El número de filas y columnas es flexible dependiendo de la economía en cuestión y el
+   propósito de su constitución. 
+5. Cada celda describe los pagos desde la cuenta de la columna a la cuenta de la fila.
+6. Los ingresos de la cuenta aparecen en la fila y los gastos en la columna.
+
+## La matriz de contabilidad social - SAM (cont.)
+
+7. Opera el principio de contabilidad de doble entrada: 
+
+   *Total de ingresos (suma de filas) = Total de gastos (suma de columnas)*
+
+8. Concepción de la SAM como una representación tabular de identidades contables. Donde los ingresos deben ser igual a los gastos para todos los sectores de la economía. 
+  
+9. Surgen identidades macroeconómicas
+
+
+\begin{block}{Fuentes}
+Cuentas Nacionales, Matrices de Insumo-Producto, Estadísticas Varias, Balanza de Pagos, etc
+\end{block}
+
+Consistencia en la información y en las cuentas macroeconímicas.
+
+## Consistencia y Origen de Datos
+
+- La SAM busca reflejar la consistencia de las cuentas macroeconómicas en una economía, verificando las identidades macroeconómicas fundamentales como la igualdad entre ahorro e inversión.
+- Fuentes de datos incluyen cuentas nacionales, matrices de insumo-producto, balanza de pagos, y diversas estadísticas oficiales.
+
+## Estructura de la SAM Simple
+
+1. **Columnas y Filas:** Representan los ingresos y gastos de las unidades económicas:
+   - Columna de producción: incluye costos de insumos intermedios, salarios y ganancias.
+   - Filas: ingresos de los agentes económicos (asalariados y no asalariados), diferenciados entre salarios, ganancias, y otros flujos.
+   
+2. **Ejemplo Básico:**
+   - **Columna de costos de producción:** Totaliza los costos de producción, incluyendo insumos intermedios ($a PX$), costos salariales ($wbX$), y ganancias ($\pi X$).
+   - **Ingreso por fila:** Refleja la suma de ingresos de los asalariados y no asalariados, mostrando el valor agregado total.
+
+3. **Reglas de Consistencia:**
+   - Cada fila debe ser valuada al mismo precio.
+   - Sumas de filas y columnas deben ser iguales, asegurando equilibrio entre ingresos y gastos.
+
+## SAM Ampliada: Inclusión de Actores Económicos
+
+**Ampliación de la SAM**:
+- **Actores Adicionales:** Se incluyen asalariados, rentistas, empresas, sistema bancario, gobierno y sector externo.
+- **Filas y Columnas Adicionales:** Representan flujos de fondos, donde:
+   - **Filas** representan ingresos (por ejemplo, ingresos de asalariados, subsidios, y ganancias).
+   - **Columnas** representan gastos (consumo, impuestos, y ahorro).
+
+**Distribución y Asignación de Ingresos:**
+1. **Asalariados:** Ingresan por salarios, subsidios, y obtienen intereses de depósitos.
+   - Gastos en consumo, impuestos y ahorro.
+   
+2. **Rentistas:** Ingresan por dividendos y depósitos.
+   - Gastos incluyen consumo e impuestos, además de una porción ahorrada.
+
+3. **Negocios:** Ingresan de ganancias y destinan estos fondos a inversiones, pago de dividendos y pago de deuda externa.
+   
+4. **Gobierno:** Ingresos fiscales de impuestos y gasto en sueldos, transferencias e intereses de deuda.
+
+## SAM Ampliada: Bloque de Flujos de Fondos
+
+**Uso de Excedentes y Activos Financieros**:
+- **Ahorro Asalariado:** Invertido en depósitos bancarios, que aparecen como pasivos de los bancos.
+- **Ahorro Rentista:** Invertido en acciones, depósitos, y otros papeles financieros.
+- **Excedentes de Negocios:** Financian inversión productiva, emisión de acciones y préstamos locales e internacionales.
+
+**Balance General y Consistencia Macroeconómica:**
+- Los flujos financieros pueden acumularse para formar balances, reflejando la posición neta de cada sector.
+- Las identidades macroeconómicas fundamentales (como la igualdad entre el ahorro y la inversión) aseguran que la SAM cierre en términos contables.
+
+---
+
+## SAM simple
+
+![](C:/Users/Admin/Documents/GitHub/Programacion/Clases/imagenes/sam_simple.PNG)
+
+...
+
+(resto de tu contenido)
+

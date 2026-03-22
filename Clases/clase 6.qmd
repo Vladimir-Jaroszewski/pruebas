@@ -1,0 +1,214 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Sexta Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Índice"
+---
+# Modelo de Programación Financiera del FMI
+
+## Modelo de Programación Financiera del FMI
+
+**Un programa financiero** es un conjunto de medidas de política económica coordinada, principalmente en los sectores monetario, fiscal y de balanza de pagos, dirigidas a alcanzar *ciertas metas económicas*. En la práctica, la programación financiera incluye las tareas de realizar un diagnóstico, establecer las metas económicas, seleccionar los instrumentos de política y cuantificar los valores de esos instrumentos.
+
+Esta técnica diseñada en el Fondo Monetario Internacional (FMI) el objetivo inicial era precisar y analizar los **factores causantes de los déficit en balanzas de pagos** y determinar cualitativa y cuantitativamente las medidas de política económica necesarias para enfrentar dichos desequilibrios.
+
+## Modelo
+
+### Supuestos:
+
+
+
+1. \begin{flushleft}
+\(
+\left\{
+\begin{aligned}
+    P_t &= 1 \\
+    P_{t-1} &= 1
+\end{aligned}
+\right.
+\implies \Delta P_t = 0
+\)
+\end{flushleft}
+
+
+2. $E_t = E = 1$
+3. $v_t = v_{t-1} = \bar v$
+
+
+
+
+## Modelo
+
+**Ecuación de la oferta monetaria:**
+
+$$
+ M_t^s = D_t + E_t R_t
+\tag{1}
+$$
+Velocidad de circulacion monetaria:
+$$
+v_t=\frac{Y_t}{M^s_t}
+\tag{2}
+$$
+
+Demanda de dinero:
+$$
+M^d_t= kY_t = v^{-1}_t Y_t 
+\tag{3}
+$$
+
+Donde:
+
+   - $M_t^s$: Oferta monetaria.
+   - $D_t$: Crédito doméstico.
+   - $R_t$: Reservas internacionales.
+   - $E_t$: Tipo de cambio.
+   - $Y_t$: Ingreso nominal.
+   - $k$: Relación entre el ingreso nominal y la demanda de dinero.
+   
+
+## Modelo
+
+
+En estos modelos generalmente se trabaja con flujos:
+
+$$
+\Delta M_t^s = \Delta D_t +  \bar  E_t \Delta R_t 
+\tag{1'}
+$$
+
+$$
+\Delta M_t^d =\bar v^{-1}_{t} \Delta Y_t 
+\tag{2'}
+$$
+
+
+Tomando la condición de equilibrio en el mercado de dinero $\Delta M_t^d = \Delta M_t^s$, tenemos:
+
+$$
+\bar v^{-1}_{t} \Delta Y_t = \Delta D_t + \Delta \bar E_t R_t
+$$
+
+Donde $\Delta R_t = X_t - M_t + K_t$, es el saldo de la balanza de pagos.
+
+## Modelo
+
+### Ecuación de Programación Financiera del FMI:
+
+Indica cuánto debería ser la variación del crédito para alcanzar una meta de balanza de pagos, bajo un tipo de cambio fijo. Además, indirectamente, establece el nivel de déficit fiscal permitido al gobierno.
+$$
+\Delta D_t =\bar v^{-1}_{t-1} \Delta Y_t - \bar E_t \Delta R_t \quad \text{(I)}
+$$
+
+
+## Cambios en el nivel de precios
+
+Si levantamos el supuesto de que no hay cambios en el nivel de precios ($\Delta P_t = 0$), por lo que ingreso nominal y real eran iguales $(\Delta Y_t= \Delta y_t)$, ahora tenemos:
+
+$$
+\Delta Y_t = Y_t - Y_{t-1}
+$$
+
+$$
+\Delta Y_t = y_t( P_{t-1} + \Delta P_{t}) -y_{t-1}P_{t-1}
+$$
+
+Donde $P_t = P_{t-1} + \Delta P_t$. Introduciendo esta nueva variable:
+
+### Ecuación de Programación Financiera del FMI con variación en precios:
+$$
+\Delta D_t =\bar v^{-1}_{t} \left[ (y_t( P_t - P_{t-1})) - y_{t-1} P_{t-1} \right] -  E_t \Delta R_t \quad\   (I')
+$$
+
+# Extensión de Polak 
+
+## Extensión de Polak 
+
+Polak incorpora a este modelo la ecuación de la balanza de pagos (la restricción externa):
+
+\begin{block}{Restricción externa:}
+
+$$
+\Delta R_t = X_t - \alpha (y_t +\Delta y_t )+ F_t \quad (II)
+$$
+\end{block}
+
+Donde:
+
+- $X_t$ son exportaciones.
+- $\alpha (y_{t-1} + \Delta y_t)$ son  importaciones
+- $F_t$ es el flujo de capital neto.
+
+## Extensión de Polak  
+
+Reemplazando (II) en (I):
+
+### Ecuacion del FMI con extension del Polak
+Solución del modelo de Polak para el equilibrio interno y la balanza de pagos:
+$$
+\Delta y_t= \frac {\Delta D_t +X_t +F_t -\alpha\ y_{t-1}}{\bar v^{-1}_t+ \alpha}
+\tag{III}
+$$
+
+## Extensión de Polak: Levantando el supuesto de tipo de cambio fijo
+
+Partiendo desde la ecuación (1):
+
+$$
+\begin{aligned}
+&D_t +E_t R_t = M^s_t \\
+&\Delta D_t +E_t R_t -E_{t-1} R_{t-1} = \Delta M^s_t \\
+&\Delta D_t +[E_{t-1}+ \Delta E_t][ R_{t-1}+ \Delta R_t] -E_{t-1}R_{t-1} = \bar v^{-1} \Delta Y_t 
+\end{aligned}
+$$
+
+Recordando que: $Y_t= y_tP_t=[y_{t-1} + \Delta y_t][P_{t-1} + \Delta P_t]$
+
+$$
+\begin{aligned}
+&\Delta D_t +[E_{t-1}R_{t-1}] + \Delta E_t R_{t-1} +  \Delta R_{t}E_{t-1}-E_{t-1}R_{t-} =  \\
+&\bar v^{-1} \left[ P_{t-1} \Delta y_t + \Delta P_t \Delta y_t + y_{t-1} \Delta P_t \right]
+\end{aligned}
+$$
+
+Por lo tanto despejando $\Delta P_t$ obtenemos: 
+$$\boxed{
+\Delta P_t = \frac {\Delta D_t + \Delta E_t [R_{t-1} +\Delta R_t] + \Delta R_t E_{t-1} - \bar v^{-1} P_{t-1} \Delta y_t}{\bar v^{-1}[y_{t-1}+ \Delta y_t]}
+\tag{IV}}
+$$
+
+## Extensión de Polak: Levantando el supuesto de tipo de cambio fijo
+
+Para que el modelo esté completo, debemos reemplazar $\Delta R_t$ en $(IV)$:
+
+\begin{block}{Extensión de Polak, con tipo de cambio flexible:}
+  \begin{align*}
+\Delta P_t = &\frac {\Delta D_t + \Delta E_t [R_{t-1} +\Delta R_t]}{\bar v^{-1}[y_{t-1}+ \Delta y_t]}\\
+& \frac {+ [X_t-\alpha(y_{t-1}+\Delta y_t)+F_t] E_{t-1} - \bar v^{-1} P_{t-1} \Delta y_t}{\bar v^{-1}[y_{t-1}+ \Delta y_t]}
+\tag{V}
+  \end{align*}
+\end{block}
+
+Estática comparativa (siendo los cambios $\Delta > 0$ y $\nabla <0$):
+
+- Si $\Delta R_t \implies \Delta M^s_t\ \  \text{; si la }M^d_t \text{ es estable} \implies \Delta P_t$
+- Si $\Delta v_t \implies \Delta P_t$
+- Si $\Delta E \implies \Delta R_t$ si: $\Delta M^d_t=0 \implies \Delta P_t$
+- Si $\Delta M^s_t$ \ \ fuertemente,  $\Delta y$   y  $\Delta M^d_t$ $\implies \Delta P_t =0$
+
+
+## Simulación:
+
+![](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\sim_fmi.PNG)
+
+
+
+
+
+
+

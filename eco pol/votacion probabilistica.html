@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>votacion-probabilistica</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="votacion probabilistica_files/libs/clipboard/clipboard.min.js"></script>
+<script src="votacion probabilistica_files/libs/quarto-html/quarto.js"></script>
+<script src="votacion probabilistica_files/libs/quarto-html/popper.min.js"></script>
+<script src="votacion probabilistica_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="votacion probabilistica_files/libs/quarto-html/anchor.min.js"></script>
+<link href="votacion probabilistica_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="votacion probabilistica_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="votacion probabilistica_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="votacion probabilistica_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="votacion probabilistica_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<p>title: Economía Política title-slide-attributes: data-background-image: background.png data-background-size: contain data-background-opacity: “0.5” subtitle: Unidad author: | | <strong>Sebastián Freille</strong> | sfreille@unc.edu.ar | Licenciatura en Economía | FCE-UNC format: revealjs: slide-number: true preview-links: auto css: ...css width: 1500 center-title-slide: true center: true tbl-cap-location: bottom<br>
+toc: true toc-depth: 1 toc-title: Contenidos link-external-newwindow: true</p>
+<hr>
+<section id="modelo-de-votacion-probabilistica" class="level1">
+<h1>Modelo de votacion probabilistica</h1>
+<section id="tvm-realismo-y-ajuste" class="level2">
+<h2 class="anchored" data-anchor-id="tvm-realismo-y-ajuste">TVM: Realismo y ajuste</h2>
+<ul>
+<li>Sabemos que el TVM es útil pero en muchas ocasiones supuestos no aplicables</li>
+<li>Tema clave <span class="math inline">\(\longrightarrow\)</span> multidimensional de decisiones políticas
+<ul>
+<li>El modelo de votación probabilística (MVP) permite relajar algunos supuestos e incorporar más realismo</li>
+</ul></li>
+</ul>
+</section>
+<section id="mvp-intuición-y-supuestos" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-intuición-y-supuestos">MVP: Intuición y supuestos</h2>
+<ul>
+<li>Recordemos que <span class="math display">\[\begin{align}
+p_{A}^{i}(q_{A},q_{B})=
+\begin{cases}
+1 &amp; si \quad V^{i}(q_{A}) &gt; V^{i}(q_{B}) \\
+\frac{1}{2} &amp; si \quad V^{i}(q_{A}) = V^{i}(q_{B}) \\
+0 &amp; si \quad V^{i}(q_{A}) &lt; V^{i}(q_{B}) \\
+\end{cases}
+\end{align}\]</span></li>
+<li>Es decir, <em>prob</em> de que <span class="math inline">\(i\)</span> vote por <span class="math inline">\(A\)</span> cuando plataformas son <span class="math inline">\((q_{A},q_{B})\)</span> no es continua –saltos discretos
+<ul>
+<li>Fn objetivo de candidatos discontinuas en espacio de políticas</li>
+</ul></li>
+</ul>
+</section>
+<section id="mvp-intuición-y-supuestos-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-intuición-y-supuestos-cont.">MVP: Intuición y supuestos (cont.)</h2>
+<ul>
+<li>Por esto, candidatos incentivo a proponer nuevas <span class="math inline">\(q_{i}\)</span> repetidamente
+<ul>
+<li>Proceso continúa <em>ad-infinitum</em> si: 1) preferencias no son de pico único; 2) manipulación de agenda y voto estratégico</li>
+</ul></li>
+<li>El MVP suaviza estas funciones discontinuas aún con espacios de po´litica multidimensionales</li>
+</ul>
+</section>
+<section id="mvp-intuición-y-supuestos-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-intuición-y-supuestos-cont.-1">MVP: Intuición y supuestos (cont.)</h2>
+<ul>
+<li>Diferentes motivaciones (“microfundamentos”) para el MVP</li>
+<li>Individuos motivados por dos dimensiones:
+<ol type="1">
+<li>Políticas –<span class="math inline">\(q_{i}\)</span></li>
+<li>Ideología –<span class="math inline">\(\sigma^{ij}\)</span></li>
+</ol></li>
+<li>NOTA: Segunda dimensión No necesariamente debe ser “ideología” en sentido estricto
+<ul>
+<li>Puede ser cualquier elemento que haga que un votante tenga una <em>tendencia</em> a votar por tal o cual candidato</li>
+</ul></li>
+</ul>
+</section>
+<section id="mvp-modelo-básico" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-modelo-básico">MVP: Modelo básico</h2>
+<ul>
+<li>Sociedad compuesta por número <span class="math inline">\(J\)</span> de grupos diferentes. Población total normalizada a 1. Cada grupo tiene una cantidad/fracción <span class="math inline">\(\alpha_{j}\)</span> de individuos tal que <span class="math inline">\(\sum_{j=1}^{J}\alpha_{j}=1\)</span></li>
+<li>Individuos <strong>dentro de cada grupo</strong> son iguales con excepción de su preferencia “ideológica”</li>
+<li>Dos candidatos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> compiten ofreciendo políticas contenido en el vector <strong><span class="math inline">\(q\)</span></strong>.</li>
+</ul>
+</section>
+<section id="mvp-modelo-básico-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-modelo-básico-cont.">MVP: Modelo básico (cont.)</h2>
+<ul>
+<li>Sea <span class="math inline">\(\pi_{P}^{j}\)</span> la fracción de votantes en grupo <span class="math inline">\(j\)</span> que vota por <span class="math inline">\(P\)</span> con <span class="math inline">\(P \in {A,B}\)</span>. Proporción de votos <span class="math inline">\(\pi_{P}\)</span> que espera obtener:</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+\pi_{P}=\sum_{j=1}^{J}\alpha_{j}\pi_{P}^{j}
+\end{align}\]</span></p>
+<ul>
+<li>En MCE Downs, forma de cada <span class="math inline">\(\pi_{P}^{j}\)</span> parecida anterior pero saltos de continuidad. Si es <em>unidimensional</em>, gana <span class="math inline">\(q_{m}\)</span>. Si es <em>multidimensional</em>, ciclos interminables</li>
+</ul>
+</section>
+<section id="mvp-preferencias" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-preferencias">MVP: Preferencias</h2>
+<ul>
+<li>Cada <span class="math inline">\(i\)</span> en <span class="math inline">\(j\)</span> tiene las preferencias <span class="math display">\[\begin{align}
+V^{ij}=V^{j}(\mathbf{q})+\sigma^{ij}(P)
+\end{align}\]</span></li>
+<li><span class="math inline">\(V^{j}(\mathbf{q})\)</span> es utilidad indirecta de individuos de grupo <span class="math inline">\(j\)</span> y <span class="math inline">\(\sigma^{ij}(P)\)</span> beneficios para votante <span class="math inline">\(i\)</span> en grupo <span class="math inline">\(j\)</span> si gana <span class="math inline">\(P\)</span>. Sea <span class="math inline">\(p_{A}^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})\)</span> la <em>prob</em> que <span class="math inline">\(i\)</span> de <span class="math inline">\(j\)</span> vote por <span class="math inline">\(A\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+p_{A}^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})=
+\begin{cases}
+1 &amp; si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) &gt; V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+\frac{1}{2} &amp; si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) = V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+0 &amp; si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) &lt; V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+\end{cases}
+\end{align}\]</span></p>
+</section>
+<section id="mvp-preferencias-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-preferencias-cont.">MVP: Preferencias (cont.)</h2>
+<ul>
+<li>Definamos <span class="math inline">\(\sigma^{ij}=\sigma^{ij}(B)-\sigma^{ij}(A)\)</span> como la <strong>preferencia ideológica relativa por B</strong>. Entonces:</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+p^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})=
+\begin{cases}
+1 &amp; si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) \geq \sigma^{ij} \\
+\frac{1}{2} &amp; si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) = \sigma^{ij}  \\
+0 &amp; si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) \leq \sigma^{ij}  \\
+\end{cases}
+\end{align}\]</span> - Votante <span class="math inline">\(i\)</span> sólo votará por <span class="math inline">\(A\)</span> si los beneficios económicos que recibe <em>compensan</em> su preferencia ideológica - Fn objetivo de políticos se vuelve continua por incertidumbre sobre distribución de preferencias ideológicas</p>
+</section>
+<section id="mvp-preferencias-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-preferencias-cont.-1">MVP: Preferencias (cont.)</h2>
+<ul>
+<li>Distribución de <span class="math inline">\(\sigma^{j}\)</span> dada por <span class="math inline">\(F^{j}\)</span> definida para cada grupo <span class="math inline">\(j\)</span> sobre intervalo <span class="math inline">\((-\infty,\infty)\)</span> con fn de densidad <span class="math inline">\(f^{i}\)</span></li>
+<li>Fracción de votantes en grupo <span class="math inline">\(j\)</span> que votarán por <span class="math inline">\(A\)</span> es <span class="math display">\[\begin{align}
+\pi_{A}^{j}=F^{j}(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b}))=\int_{-\infty}^{(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b}))}f(\sigma^{ij})d\sigma^{ij}
+\end{align}\]</span></li>
+<li>Punto <span class="math inline">\(\longrightarrow\)</span> para cada <span class="math inline">\(j\)</span> un individuo <span class="math inline">\(i\)</span> con <span class="math inline">\(\sigma^{ij}\)</span> crítico, <span class="math inline">\(\sigma^{j*}\)</span> igual a <span class="math inline">\(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b})\)</span> que divide a la población entre los votan por A y los que votan por B
+<ul>
+<li>Indiferente entre A y B <span class="math inline">\(\longrightarrow\)</span> <strong>swing voter</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="mvp-preferencias-cont.-2" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-preferencias-cont.-2">MVP: Preferencias (cont.)</h2>
+</section>
+<section id="mvp-propuestas-de-política-y-votos" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-propuestas-de-política-y-votos">MVP: Propuestas de política y votos</h2>
+<ul>
+<li>Agregamos para cada grupo de votantes, fracción de votos que recibe A: <span class="math display">\[\begin{align}
+\pi_{A}=\sum_{j=1}^{J}\alpha^{j}\pi_{A}^{j}=\sum_{j=1}^{J}\alpha^{j}F^{j}(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b}))
+\end{align}\]</span></li>
+<li>Recuerde:
+<ol type="1">
+<li>Al candidato sólo le interesa ganar (maximizar <span class="math inline">\(\pi_{P}\)</span>)</li>
+<li>Anuncio de políticas simultáneo(compromiso perfecto)</li>
+</ol></li>
+<li>Debemos encontrar fn. de reacción para candidato (a través de CPO)</li>
+</ul>
+</section>
+<section id="mvp-propuestas-de-políticas-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-propuestas-de-políticas-cont.">MVP: Propuestas de políticas (cont.)</h2>
+<ul>
+<li>Funciones de reacción de candidatos son simétricas: <span class="math display">\[\begin{align}
+0=\sum_{j=1}^{J}\alpha^{j}f^{j}(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b}))\frac{\partial(V^{j}(\mathbf{q}(A)))}{\partial(\mathbf{q}(A))} \\
+0=\sum_{j=1}^{J}\alpha^{j}f^{j}(V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{b}))\frac{\partial(V^{j}(\mathbf{q}(B)))}{\partial(\mathbf{q}(B))} \\
+\end{align}\]</span></li>
+</ul>
+</section>
+<section id="mvp-propuestas-de-políticas-y-votos-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-propuestas-de-políticas-y-votos-cont.">MVP: Propuestas de políticas y votos (cont.)</h2>
+<ul>
+<li>Por esta razón, <span class="math inline">\(q_{i}\)</span> cada candidato…es la misma!. Convergencia donde <span class="math inline">\(\mathbf{q}_{A}=\mathbf{q}_{B}=\mathbf{q}\)</span>: <span class="math display">\[\begin{align}
+0=\sum_{j=1}^{J}\alpha^{j}f^{j}(0)\frac{\partial{V^{j}(\mathbf{q})}}{\partial{\mathbf{q}}}
+\end{align}\]</span></li>
+</ul>
+</section>
+<section id="mvp-equilibrio-e-implicancias" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-equilibrio-e-implicancias">MVP: Equilibrio e implicancias</h2>
+<ul>
+<li>Note que la anterior solución equivale a solucionar un problema de maximización de fn. de bienestar social ponderada <span class="math display">\[\begin{align}
+\Omega=\sum_{j=1}^{J}\omega^{j}V^{j}(\mathbf{q})
+\end{align}\]</span></li>
+<li>donde el peso <span class="math inline">\(\omega^{j}\)</span> es <span class="math inline">\(\alpha^{j}f^{j}(0)\)</span> con <span class="math inline">\(f^{j}(0)\)</span> la densidad del “sesgo ideológico” para c/u de grupos en el punto en el que ambos ofrecen la misma política</li>
+<li>Todos tienen un voto pero… algunos más poderosos que otros: 1) grupos más numerosos, <span class="math inline">\(\alpha^{j}\)</span> mayor; 2) grupos menos ideológicos, <span class="math inline">\(f^{j}(0)\)</span></li>
+</ul>
+</section>
+<section id="mvp-equilibrio-e-implicancias-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-equilibrio-e-implicancias-cont.">MVP: Equilibrio e implicancias (cont.)</h2>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales">MVP: Caso particular, 3 grupos sociales</h2>
+<ul>
+<li>Caso particular del modelo anterior con 3 (tres) grupos sociales. Sociedad compuesta por 3 (tres) grupos de individuos <span class="math inline">\((J
+\in {R,M,P})\)</span></li>
+<li>Cada grupo conformado por número <span class="math inline">\(\alpha^{j}\)</span> de individuos y población total normalizada a 1, <span class="math inline">\(\sum_{j}\alpha^{j}=1\)</span></li>
+<li>Individuos de cada grupo tienen mismo ingreso, <span class="math inline">\(y^{j}\)</span> pero existen diferencias entre ingresos <em>entre grupos</em>
+<ul>
+<li>suponemos <span class="math inline">\(y^{R}&gt;y^{M}&gt;y^{P}\)</span></li>
+</ul></li>
+<li>El ingreso medio es <span class="math inline">\(\sum_{j}\alpha^{j}y^{j}=\bar{y}\)</span></li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>Las preferencias de los agentes son:</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+V^{i,j}=V^{j}(\mathbf{q})+\sigma^{i,j}(P)+\delta(P)
+\end{equation}\]</span></p>
+<ul>
+<li><span class="math inline">\(\sigma^{i,j}(P)\)</span> es la <em>preferencia ideológica del individuo</em> y <span class="math inline">\(\delta(P)\)</span> mide <em>preferencia promedio en la población como un todo</em> (“shock agregado de popularidad”) –carisma, eventos inesperados, escándalos.</li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-1">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>Simplificando:</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+\sigma^{i,j}(B)-\sigma^{i,j}(A)&amp;=\sigma^{i,j} \\
+\delta(B)-\delta(A)&amp;=\delta
+\end{align}\]</span></p>
+<ul>
+<li>Miden preferencia relativa para <span class="math inline">\(i\)</span> en grupo <span class="math inline">\(j\)</span> y para la población en general</li>
+<li>Suponemos que <span class="math inline">\(\sigma^{i,j}\)</span> y <span class="math inline">\(\delta\)</span> siguen una distribución uniforme simétrica alrededor de cero</li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-2" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-2">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-3" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-3">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-4" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-4">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>Densidad para ideología individual viene dada por parámetro <span class="math inline">\(\phi^{j}\)</span> y definida sobre el intervalo <span class="math inline">\([-\frac{1}{2\phi^{j}},-\frac{1}{2\phi^{j}}]\)</span>. Para el shock agregado, la densidad es <span class="math inline">\(\psi\)</span> definida sobre <span class="math inline">\([-\frac{1}{2\psi},-\frac{1}{2\psi}]\)</span></li>
+<li>Candidatos anuncian <em>simultáneamente</em> plataformas de política –sólo conocen las preferencias de los electores y las distribuciones de paramétros de ideología y del shock de popularidad pero no sus valores realizados</li>
+<li>Luego se conoce el valor realizado de <span class="math inline">\(\delta\)</span></li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-5" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-5">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>Buscamos al votante pivotal –<em>swing-voter</em>- de cada grupo <span class="math inline">\(j\)</span> <span class="math display">\[\begin{equation}
+\tilde{\sigma^{j}}=V^{j}(\mathbf{q_{A}})-V^{j}(\mathbf{q_{B}})-\delta
+\end{equation}\]</span></li>
+<li>es aquel votante cuyo sesgo ideológico <span class="math inline">\(\tilde{\sigma^{j}}\)</span> lo hace indiferente entre los dos candidatos</li>
+<li>electores con <span class="math inline">\(\sigma^{i,j} &lt; \tilde{\sigma^{j}}\)</span> prefieren votar a <span class="math inline">\(A\)</span>
+<ul>
+<li>calculamos <span class="math inline">\(\pi^{j}_{A}\)</span>, fracción de votantes de <span class="math inline">\(j\)</span> que votan por A como el area bajo la fn. de densidad</li>
+</ul></li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-6" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-6">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-7" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-7">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<p><span class="math display">\[\begin{align}
+\pi^{j}_{A}&amp;=\int_{-\frac{1}{2\phi^{j}}}^{V^{j}(\mathbf{q_{A}})-V^{j}(\mathbf{q_{B}})-\delta}\phi^{j}d\sigma^{i,j}=\phi^{j}[V^{j}(\mathbf{q_{A}})-V^{j}(\mathbf{q_{B}})-\delta+\frac{1}{2\phi^{j}}]
+\\
+\pi^{j}_{A}&amp;=\phi^{j}\tilde{\sigma^{j}}+\frac{1}{2}
+\end{align}\]</span> - y agregando sobre todos los grupos: <span class="math display">\[\begin{equation}
+\pi_{A}=\sum_{j}\alpha^{j}[\phi^{j}\tilde{\sigma^{j}}+\frac{1}{2}]
+\end{equation}\]</span></p>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-8" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-8">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>El resultado final para la probabilidad del partido A de ganar la eleccion en función de las plataformas de política es:</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+p_{A}(\mathbf{q_{A}},\mathbf{q_{B}})=\frac{1}{2}+\frac{\psi}{\phi}[\sum_{j}\alpha^{j}\phi^{j}[V^{j}(\mathbf{q_{A}})-V^{j}(\mathbf{q_{B}})]]
+\end{equation}\]</span></p>
+<ul>
+<li>note que esta probabilidad <strong>es una función continua de las distancias entras las plataformas de los candidatos</strong></li>
+</ul>
+</section>
+<section id="mvp-caso-particular-3-grupos-sociales-cont.-9" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-caso-particular-3-grupos-sociales-cont.-9">MVP: Caso particular, 3 grupos sociales (cont.)</h2>
+<ul>
+<li>Para candidato A, problema es maximizar esa probabilidad, la CPO es</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+\frac{\psi}{\phi}[\sum_{j}\alpha^{j}\phi^{j}\frac{\partial{V^{j}(\mathbf{q_{A}})}}{\partial{\mathbf{q_{A}}}}]=0
+\\
+\frac{\psi}{\phi}[\sum_{j}\alpha^{j}\phi^{j}\frac{\partial{V^{j}(\mathbf{q_{B}})}}{\partial{\mathbf{q_{B}}}}]=0
+\end{align}\]</span></p>
+<ul>
+<li>Problema simétrico –convergen a misma <span class="math inline">\(q\)</span>. Pero reciben más ponderación: a) grupos más numerosos; b) los con mayor densidad en sus sesgos ideológicos</li>
+</ul>
+</section>
+</section>
+<section id="nota-sobre-polarización" class="level1" data-background="#CAA811">
+<h1 data-background="#CAA811"><strong>Nota sobre polarización</strong></h1>
+<ul>
+<li>Medición de polarización</li>
+<li>Problemas metodológicos</li>
+<li>Evidencia de preferencias (sesgos) ideológicos</li>
+</ul>
+<section id="mvp-midiendo-polarización" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-midiendo-polarización">MVP: Midiendo polarización</h2>
+<blockquote class="blockquote">
+<p>El paper de Esteban and Ray (1994) desarrolló por primera vez una metodología para medir polarización. Prueban que cualquier medida de polarización que cumpla con los axiomas propuestos debe ser de la forma <span class="math inline">\(P(\pi,y)=\gamma \sum_{i=1}^{n} \sum_{i=1}^{n}
+\pi_{i}^{1+v}\pi_{j}|y_{i}-y_{j}|\)</span>. En esta fórmula <span class="math inline">\(\kappa\)</span> es una constante multiplicativa orientada a nominalización. En cambio <span class="math inline">\(v\)</span> es un parámetro de sensibilidad y <span class="math inline">\(\pi_{i}\)</span> son participaciones/totales de población de cada grupo. ¿Cómo interpretar el parámetro <span class="math inline">\(v\)</span>? Mide la sensibilidad de <span class="math inline">\(P\)</span> ante cambios en el tamaño de los grupos. [NOTA: Compare esta medida con un Gini. Los pesos de los grupos poblacionales son clave. A mayor <span class="math inline">\(v\)</span>, mas diferencia entre Gini y <span class="math inline">\(P\)</span>].</p>
+</blockquote>
+</section>
+<section id="mvp-midiendo-polarización-cont." class="level2">
+<h2 class="anchored" data-anchor-id="mvp-midiendo-polarización-cont.">MVP: Midiendo polarización (cont.)</h2>
+</section>
+<section id="mvp-midiendo-polarización-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-midiendo-polarización-cont.-1">MVP: Midiendo polarización (cont.)</h2>
+<ul>
+<li>Paper de Draca and Schwarz (2021) identifica <strong>polarización ideológica</strong> reconociendo cuatro tipos ideológicos (hacen “latent dirichlet allocation”)
+<ul>
+<li>Liberal de centro</li>
+<li>Conservador de centro</li>
+<li>Anarquista de izquierda</li>
+<li>Anarquista de derecha</li>
+</ul></li>
+<li>Otro paper de Boxell et all (2020) mide e identifica <strong>polarización afectiva</strong> –refiere al grado en que individuos rechazan más fuertemente a otros partidos que al suyo. En ambos casos, evidencia de polarización es mixta. No todos los países ni en todos los casos.</li>
+</ul>
+</section>
+<section id="mvp-midiendo-polarización-cont.-2" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-midiendo-polarización-cont.-2">MVP: Midiendo polarización (cont.)</h2>
+</section>
+<section id="mvp-midiendo-polarización-cont.-3" class="level2">
+<h2 class="anchored" data-anchor-id="mvp-midiendo-polarización-cont.-3">MVP: Midiendo polarización (cont.)</h2>
+</section>
+</section>
+<section id="modelo-de-ciudadano-candidato" class="level1">
+<h1><strong>Modelo de ciudadano-candidato</strong></h1>
+<ul>
+<li>Más realismo: políticos partidistas</li>
+<li>El modelo de ciudadano-candidato</li>
+<li>Implicancias</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

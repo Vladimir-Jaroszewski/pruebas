@@ -1,0 +1,213 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Quinta Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Indice"
+---
+
+# Modelo del Banco Mundial (RMSM)
+
+## Equilibrio Interno
+
+
+Los modelos usados por el Banco Mundial se ocupan de la tasa de crecimiento del producto potencial de los países. Le interesa proyectar el crecimiento del producto potencial.
+
+El modelo RMSM utiliza una tecnología de Leontief. No incluye mano de obra y considera muy importante el sector externo como medio de financiación de insumos importados.
+
+## Equilibrio Interno
+
+- Ecuación de restricción de divisas: 
+$$\Delta R_t = X_t - \alpha\ [\ y_t + \Delta y_t]+ \Delta F_t
+\tag{1}
+$$
+
+
+
+- Ecuación de la inversion:
+$$
+I_t =  \Omega\ \Delta y_t\ ; \quad \Omega = \frac{\Delta K}{\Delta Y}
+\tag{2}
+$$
+
+
+
+- Ecuación de ahorro doméstico.
+
+$$
+S_t = S_0 + s [\ y_{t-1} + \Delta y_t\ ]
+\tag{3}
+$$
+
+- Ecuacion del ahorro externo:
+$$
+S_{FOR} = \alpha [\ y_{t-1} + \Delta y_t ]- \bar{X_t} = \Delta F_t - \Delta R_t
+\tag{4}
+$$
+
+
+## Ahorro = Inversión
+
+Sumando ambos ahorros e igualando a la inversion:
+
+$$
+S_t + S_{FOR} = I_t
+$$
+
+Reemplazando en la ecuacion anterior a sus equivalentes de las ecuaciones $(2)$, $(3)$ y $(4)$. Tenemos:
+
+$$
+S_0 + s[ y_{t-1}+ \Delta y_t]+ \alpha [y_{t-1} + \Delta Y_y] - \bar X_t = \Omega \Delta Y_t
+$$
+
+Operando:
+$$
+S_0 + sy_{t-1}+ s\Delta y_t+ \alpha y_{t-1} + \alpha\Delta Y_y - \bar X_t = \Omega \Delta Y_t
+$$
+
+Simplificando:
+
+$$
+S_0 + s\ y_{t-1} + \alpha\ y_{t-1} - \bar X_t = \Delta y_t\ (\Omega - s-\alpha)
+$$
+
+## Brecha interna
+
+\begin{block}{Ecuación de equilibrio interno o brecha interna}
+Mide la capacidad de crecimiento de una economía.
+  \begin{equation*}
+  \frac{S_0 + s\ y_{t-1} + \alpha\ y_{t-1} - \bar X_t }  {(\Omega - s-\alpha)}=\Delta y_t
+  \end{equation*}
+\end{block}
+
+**Condiciones de crecimiento:**
+ 
+- Si \fbox{$\bar{X}_t \uparrow \implies S_{FOR} \downarrow \implies y_t \uparrow$} debido a que estamos en pleno empleo.
+- Si \fbox{$s_t \uparrow \implies y_t \uparrow$}.
+- Si \fbox{$PMgM \uparrow \implies y_t \uparrow$} (si importo más por unidad de producto, aumenta el ahorro externo y podemos financiar más inversión).
+- Si \fbox{$\Omega \downarrow \implies y_t \uparrow$} \ ; $\frac{1}{\Omega} = R = \frac{\Delta Y}{\Delta K} = PMgK$ tiene que ver con los incentivos económicos para la inversión. Para crecer, hay que mejorar la productividad.
+
+## Tasa de crecimiento de la economía:
+
+La tasa de crecimiento de la economia esta dado por: 
+
+$$
+g = \frac{I}{K} = \frac{I}{Y}\frac{Y}{K}\ 
+$$
+
+siendo $\frac{Y}{K}=PMgK$
+
+### Creciemiento economico:
+$$
+g_{PBI} = \frac{\Delta PBI}{PBI} = \frac{\Delta K}{K}
+$$
+
+
+## Equilibrio Externo
+
+Incorporamos una segunda restricción, buscando cuanto puede crecer una economía con la expansión del sector externo.
+
+De la ecuación $(1)$:
+
+\begin{align*}
+  \Delta R_t &= \bar{X}_t + \alpha \left[ y_{t-1} + \Delta y_t \right] + \Delta F_i \\
+  \Delta R_t &- \Delta F_i + \bar{X}_t + \alpha  y_{t-1} = - \alpha \Delta y_t  
+\end{align*}
+
+
+
+\begin{block}{Ecuación de equilibrio externo o brecha externa:}
+Muestra la restricción de las divisas para el crecimiento.
+  \begin{equation*}
+  \frac{\Delta F_i - \Delta R_t + \bar X_t - \alpha y_{t-1}}{\alpha}=\Delta y_t
+  \end{equation*}
+\end{block}
+
+## Modelo de Dos brechas
+
+\vspace{0.2cm}
+
+\begin{columns}
+    \begin{column}{0.6\textwidth}
+ \begin{tikzpicture}[scale=1]
+            % Ejes
+            \draw[->] (0,0) -- (0,5) node[above] {$Ingreso\ (Y)$};
+            \draw[->] (0,0) -- (5,0) node[right] {$Exp\ (X)$};
+
+            % Brecha Intenterna
+            \draw[red] (0.2,4.8) -- (4.3,0.7) node[right] {B. Int};
+            \draw[black] (3.8,1.2) --  (3.8,0.7);
+            \draw[black] (3.8,0.7) --  (4.3,0.7);
+            \draw[->] (3.9,0.8) -- (5,1.5) node[above] {Pend.= $\frac{1}{\Omega-s-\alpha}$};
+            
+            
+             % Brecha Externa
+            \draw[blue] (0.2,0.7) -- (4.3,4.8) node[right] {B. Ext};
+            \draw[black] (3.6,4.1) --  (4.1,4.1);
+            \draw[black] (4.1,4.1) --  (4.1,4.6);
+            \draw[->] (3.9,4.3) -- (4.7,4.3) node[right] {Pend.= $\frac{1}{\alpha}$};
+
+            % Etiquetas
+            \fill[black] (2.25, 2.75) circle (2pt);
+            \node at (2.35, 2.95) {Eq};
+            % Líneas punteadas hacia los ejes
+            \draw[dashed] (2.25, 2.75) -- (2.25, 0) node[below] {$X^*$};  % Línea vertical hasta el eje x
+            \draw[dashed] (2.25, 2.75) -- (0, 2.75) node[left] {$Y^*$};  % Línea horizontal hasta el eje y
+
+
+            % Etiquetas
+            \fill[black] (1, 4) circle (2pt);
+            \node at (1.2, 4.2) {A};
+            % Líneas punteadas hacia los ejes
+            \draw[dashed] (1, 4) -- (1, 0) node[below] {};  % Línea vertical hasta el eje x
+            \draw[dashed] (1, 4) -- (0, 4) node[left] {};  % Línea horizontal hasta el eje y
+            
+              % Etiquetas
+            \fill[black] (1, 1.5) circle (2pt);
+            \node at (1.2, 1.5) {B};
+            % Líneas punteadas hacia los ejes
+            \draw[dashed] (1, 1.5) -- (1, 0) node[below] {};  % Línea vertical hasta el eje x
+            \draw[dashed] (1, 1.5) -- (0, 1.5) node[left] {};  % Línea horizontal hasta el eje y
+            
+             % Etiquetas
+            \fill[black] (3.3, 1.7) circle (2pt);
+            \node at (3.5, 1.9) {C};
+            % Líneas punteadas hacia los ejes
+            \draw[dashed] (3.3, 1.7) -- (3.3, 0) node[below] {};  % Línea vertical hasta el eje x
+            \draw[dashed] (3.3, 1.7) -- (0, 1.7) node[left] {};  % Línea horizontal hasta el eje y
+            
+              % Etiquetas
+            \fill[black] (3.3, 3.8) circle (2pt);
+            \node at (3.6, 3.8) {D};
+            % Líneas punteadas hacia los ejes
+            \draw[dashed] (3.3, 3.8) -- (3.3, 0) node[below] {};  % Línea vertical hasta el eje x
+            \draw[dashed] (3.3, 3.8) -- (0, 3.8) node[left] {};  % Línea horizontal hasta el eje y
+            
+        \end{tikzpicture}
+      \end{column}
+      \begin{column}{0.35\textwidth}
+        \begin{itemize}
+          \item partiendo del punto A si $\Delta X$ $\implies \nabla Y_t$, debido a la caida del ahorro.
+          \item Desde el punto de vista de la brecha externa, si aumentan las exportaciones, paso del punto C al punto D.
+        \end{itemize}
+      \end{column}
+    \end{columns}
+
+Entonces:
+
+1. Puntos por debajo de la brecha interna $\longrightarrow$ desempleo de factores
+productivos
+2. Puntos por debajo de la brecha externa $\longrightarrow$ superávit externos
+
+## Simulación
+
+![Simulación](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\simulacion 2.PNG)
+
+## Simulación
+
+![Simulación](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\simulacion 3.PNG)
+

@@ -1,0 +1,283 @@
+---
+title: "Clase Práctica 12/09"
+author: "Economia Politica"
+format: 
+  beamer:
+    link-external-newwindow: true 
+---
+
+# Sistemas de Votación
+
+1)  Suponga que existen 5 grupos de individuos con los siguientes ordenamientos de preferencias sobre 5 alternativas
+
+-   Preferencias
+    -   (21 personas) $C>A>E>B>D$
+    -   (15 personas) $B>D>A>C>E$
+    -   (12 personas) $A>B>E>D>C$
+    -   (8 personas) $D>C>E>A>B$
+    -   (4 personas) $E>A>D>B>C$
+
+# Sistemas de Votación
+
+Responda que alternativa resulta ganadora bajo los siguientes métodos de votación colectiva:
+
+a)  Pluralidad $\longrightarrow$ mayoría simple
+b)  Mayoría Absoluta $\longrightarrow$ mitad más uno
+c)  Votación de Condorcet $\longrightarrow$ votación de a pares
+d)  Método Borda (criterio de n-1) $\longrightarrow$ "ranquear alternativas"
+
+# Sistemas de Votación
+
+a)  El método de Pluralidad afirma que el ganador sera la alternativa con mayor cantidad de votos, por lo tanto la alternativa ganadora es C con 21 puntos.
+
+b)  El método de mayoría absoluta afirma que el ganador debe obtener la mitad más uno de los votos para salir ganadora.**¿cuántos votantes hay?** 
+
+En este caso el total de los votantes es 60 por lo cual ninguna alternativa sale victoriosa bajo esta regla de votación.
+
+# Sistemas de Votación
+
+c)  El método de Condorcet afirma que una alternativa será la ganadora de Condorcet si vence a todas las demás alternativas en votaciones de a pares. Veamos el caso de $B\ vs\ A$.
+
+-   (21 personas) $C>A>E>B>D$ $\longrightarrow$ $A=21$
+-   (15 personas) $B>D>A>C>E$ $\longrightarrow$ $B=15$
+-   (12 personas) $A>B>E>D>C$ $\longrightarrow$ $A=12$
+-   (8 personas)\ $D>C>E>A>B$ $\longrightarrow$ $A=8$
+-   (4 personas)\ $E>A>D>B>C$ $\longrightarrow$ $A=4$
+
+Entonces:
+
+-   $B$ vs $A$ $\longrightarrow$ $15$ vs $45$ gana $A$
+
+#
+Dado que "B" perdió seguimos con "A"
+
+-   $A$ vs $C$ $\longrightarrow$ $31$ vs $29$ gana $A$
+-   $A$ vs $D$ $\longrightarrow$ $37$ vs $20$ gana $A$
+-   $A$ vs $E$ $\longrightarrow$ $48$ vs $12$ gana $A$
+
+Como A vence a todas las demás alternativas en votaciones de a pares, el ganador de Condorcet existe y es la alternativa A.
+
+
+
+
+# Sistemas de Votación
+
+d)  Borda: Dos criterios si el puntaje máximo es "n". El puntaje máximo "n-1" (o puntaje mínimo es cero). 
+
+Aplicando el criterio de otorgar "n-1" votos a la primer alternativa escogida por cada individuo, tendremos:
+
+$A \longrightarrow 63 + 30 + 48 + 8 + 12 = 161$
+
+$B \longrightarrow 21 + 60 + 36 + 0 + 4 = 121$
+
+$C \longrightarrow 84 + 15 + 0 + 24 + 0 = 123$
+
+$D \longrightarrow 0 + 45 + 12 + 32 + 8 = 97$
+
+$E \longrightarrow 42 + 0 + 24 + 16 + 16 = 98$
+
+Entonces bajo la elección de este método el ganador es nuevamente A con un total de 161 puntos.
+
+# Sistemas de Votación
+
+2)  Una elección acerca del siguiente ganador del Balón de Oro en octubre del 2024 debe ser decidida a través del método Borda. A la recta final llegaron 5 candidatos (A, B, C, D y E) y hay 45 votantes entre los cuales se encuentran grandes eminencias del deporte. 
+
+Si el jugador A obtiene 136 puntos, el jugador B obtiene 129 puntos, el C obtiene 148. el D obtiene 118 y E obtiene **?**.
+
+¿Qué criterio se utiliza, "n" o "n-1"? ¿Qué candidato será el ganador del premio? ¿Cuántos votos obtuvo E?
+
+# Sistemas de Votación
+
+## Aquí la consigna no plantea nada acerca de cuál es el criterio a utilizar dentro del método Borda, sin embargo contabilizando los votos podemos deducirlo. Si se contabilizan los votos para las alternativas A a D, nos da un total de 531 votos. Si se utilizara el criterio de "n-1", cada individuo otorgaría un total de 10 votos $(4+3+2+1+0)$, por lo que al haber 45 individuos la sumatoria de total de puntos a asignar es de 450, un número menor a los votos que ya recibieron 4 de las 5 alternativas. Entonces, el criterio a utilizar debe ser el de "n" puntos a la alternativa preferida.
+
+**¿Cuántos puntos tiene E?**
+
+# Sistemas de Votación
+
+## Aquí la consigna no plantea nada acerca de cuál es el criterio a utilizar dentro del método Borda, sin embargo contabilizando los votos podemos deducirlo. Si se contabilizan los votos para las alternativas A a D, nos da un total de 531 votos. Si se utilizara el criterio de "n-1", cada individuo otorgaría un total de 10 votos $(4+3+2+1+0)$, por lo que al haber 45 individuos la sumatoria de total de puntos a asignar es de 450, un número menor a los votos que ya recibieron 4 de las 5 alternativas. Entonces, el criterio a utilizar debe ser el de "n" puntos a la alternativa preferida.
+
+**¿Cuántos puntos tiene E?**
+
+El ganador será C con 148 puntos.
+
+# Sistemas de Votación
+
+3) Condorcet: Se realizó una votación entre expertos del mundo del tenis para determinar quién fue el mejor tenista del "Big Four" al que componen Murray (M), Federer (F), Nadal (N) y Djokovic (D). Las preferencias de lo expertos son las siguientes:
+
+-   (23 personas) $F>D>N>M$ 
+-   (31 personas) $D>N>F>M$ 
+-   (27 personas) $N>F>D>M$
+
+# Sistemas de Votación
+
+Se resuelve una votación de a pares. $F\ vs\ D$
+
+-   (23 personas) $F>D>N>M$ 
+-   (31 personas) $D>N>F>M$ 
+-   (27 personas) $N>F>D>M$
+
+$F\ vs\ D$ $\longrightarrow$ gana $F$ con 50 votos
+
+$F\ vs\ N$ $\longrightarrow$ gana $N$ con 58 votos
+
+$N\ vs\ M$ $\longrightarrow$ gana $N$ con 81 votos
+
+$N\ vs\ D$ $\longrightarrow$ gana $D$ con 54 votos
+
+**¡Hay un ciclo de Condorcet!**  
+**¿Son preferencias de pico único?**
+
+
+# Ciclo de Condorcet
+
+![Ciclo](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\ciclos condorcet.png)
+
+# Propiedades de Pico Único y Cruce Único
+
+**Pico Único:** Las preferencias de política del votante i son de *pico único* si se cumple:
+
+Si $q´´\leq q´\leq q(\alpha^i)$ entonces $W(q´´;\alpha^i) \leq W(q´; \alpha^i)$
+
+\
+
+**Cruce Único:** Las preferencias de los votantes en *V* satisfacen la propiedad de cruce único si lo siguiente se cumple:
+
+Si $q> q´$ y $\alpha^{i´}> \alpha^i$ entonces $W(q\ ; \alpha^i) \leq W(q´; \alpha^i)$
+
+
+# Pico Único y Cruce Único
+
+![Preferencias](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Cruce_Único.png)
+
+
+# Pico Único y Cruce Único
+
+![Cruce Único](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\cruce.png)
+\Huge\centerline{**es de cruce único??**}
+
+# Pico Único y Cruce Único
+
+**¿Cuál es la intuición detrás de la propiedad de cruce único?**
+
+Dadas dos políticas cualesquiera, una más a la derecha que la otra, mientras más “de derecha” sea un individuo (con relación a otro individuo), más preferirá la política de la derecha a la de la izquierda.
+
+Si nos basamos en la primera preferencia de cada votante, podríamos decir que el de la curva verde($\alpha^V$) (que votó a Patricia Bullrich ($q^{PB}$) es más de derecha que el individuo de la curva azul ($\alpha^A$) cuya primera alternativa fue Juan Schiaretti ($q^{JS}$). Para que se verifique la propiedad de cruce único, al rankear los candidatos Javier Milei - Sergio Massa, el individuo de la curva verde debería haber votado a Milei ($q^{JM}$), y sin embargo prefiere a Massa($q^{SM}$). 
+
+
+**Se viola la propiedad de cruce único, ya que dados $[q^{SM}<q^{JM}]$\  y\  $[\alpha^A<\alpha^V]$\  se observa que $W(q^{JM}\ ; \alpha^V) \leq W(q^{SM}; \alpha^V)$**
+
+
+# Modelo de Meltzer & Richard
+
+3.  Suponga una sociedad conformada por $n_{p}=530$ individuos pobre y $n_{r}=123$ individuos ricos y que éstos tienen un ingreso de $y_{p}=112$ y de $y_{r}=150$, respectivamente. A partir de aquí suponga un impuesto a las ganancias del $9\%$. Con esta información, responda:
+     i) ¿Cuál es el ingreso directo de los pobres?
+    ii) Si se somete a votación por mayoría absoluta una nueva alícuota del $12\%$ ¿Qué sucedería?
+    iii) ¿Existe desigualdad? ¿Por qué?
+
+# Modelo de Meltzer & Richard
+**i) ¿Cuál es el ingreso directo de los pobres?**
+
+::: {.callout-tip}
+## Recordar
+$$y^{d}=(1-\tau)y+T$$
+:::
+
+# Modelo de Meltzer & Richard
+
+Conociendo la fórmula para calcular el ingreso directo de un individuo, el dato que nos falta es el valor de las transferencias a cada individuo, que, para calcularlo, primero es necesario saber cuanto se recaudaría por cada individuo al aplicarle su respectiva alícuota, por lo que de esta forma $$R=\frac{(y_{p}-y^{n}_{p})n_{p}+(y_{r}-y^{n}_{r})n_{r}}{n}$$. Para encontrar ese valor, calculamos el ingreso neto de impuestos $$y^{n}=(1-\tau)y$$
+
+# Modelo de Meltzer & Richard
+
+que para el caso de los pobres y de los ricos sería  $$y^{n}_{p}=(1-0,09).112=101,92$$$$y^{n}_{r}=(1-0,09).150=136,5$$ respectivamente. 
+
+De esta forma, la recaudación per cápita viene dada por $$R=\frac{(112-101,92).530+(150-136,5).123}{653}=10,7242$$ y suponiendo que todo lo que se recauda se redistribuye $$R=T$$     
+
+# Modelo de Meltzer & Richard
+
+Ya con esta información, estamos en condiciones de calcular el ingreso directo de cada individuo pobre, que viene dado por $$y^{d}_{p}=(1-0,09)112+10,7242=112,6442$$
+
+# Modelo de Meltzer & Richard
+
+**ii) Si se somete a votación por mayoría absoluta una nueva alícuota del $12\%$ ¿Qué sucedería?**
+
+En este caso, dado que la implementación de la nueva tasa del $12\%$ está sometida a una votación por mayoría absoluta, por Teorema del Votante Mediano y como $n_{p}>n_{r}$, los pobres siempre van a preferir una alícuota más alta, por lo que sería aprobada la implementación de la nueva tasa.
+
+# Modelo de Meltzer & Richard
+
+**iii) ¿Existe desigualdad? ¿Por qué?**
+
+:::{.callout-note}
+## Nota
+Para comprobar si existe desigualdad en esta economía, primero definimos a $\delta$ como la proporción de individuos ricos y a $(1-\delta)$ como la proporción de individuos pobres. Ahora bien, si queremos parametrizar la desigualdad, definimos a $\theta$, que representaría la proporción del ingreso total en manos de los ricos. 
+:::
+
+# Modelo de Meltzer & Richard
+
+En este caso, para que exista desigualdad 
+
+$$\theta>\delta$$
+
+$$\theta=\frac{n_{r}y_{r}}{(n_{r}y_{r})+(n_{p}y_{p})}>\frac{n_{r}}{n_{r}+n_{p}}=\delta$$
+
+$$\theta=\frac{18450}{77810}=0,237>0,188= \frac{123}{653}=\delta$$ 
+
+por lo que existiría desigualdad.
+
+# Democratizacion 
+
+![Democracy Index](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Democracy Index.jpg)
+
+# Democratizacion 
+
+![Democracy Index](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Democracy Index 2.jpg)
+
+# Modelo simple de no democracia
+
+En 1810, la élite española concentraba el 80% de la riqueza del Virreinato del Río de la Plata. Los criollos lograron organizarse, por lo que su poder para la revolución es alto (Estado de la Naturaleza H). La guerra revolucionaria y el costo en vidas asociado a ella destruiría el 30% de los recursos disponibles.
+
+![Parametros](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Revolución.png)
+
+En este caso la **elección es R o NR**. La condición para R es $\theta>\mu$
+
+
+
+# Grafico Revolución 
+
+![Revolución o No Revolución](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Revolución - No Revolución.png)
+
+# Modelo Democratización
+
+En 1992, la élite afrikaaner representaba el 21% de la población y concentraba el 90% de los recursos de Sudáfrica. El African National Congress (ANC) logró, luego de mucho tiempo, organizarse de la mano de Nelson Mandela y reunir el poder de facto necesario para la revolución (Estado de la Naturaleza H). La revolución sería catastrófica: destruiría el 50% de la riqueza. El umbral para la redistribución, de acuerdo con lo que está dispuesta a ceder la élite, es de 0.7, mientras que el umbral para la democratización es de 0.3.
+
+# Modelo Democratizacion
+
+![Parámetros](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Democratización.png)
+
+En este caso la **elección es Revolución o Democracia**. 
+
+La condición para Revolución es \fbox{$\mu<\mu{**}$}
+
+La condición para Democracia es \fbox{$\mu^{**} <\mu < \mu^* $}
+
+Nótese que siempre $\mu^{**}<\mu^*$. Para los ricos es mas barata la democracia que la revolución. 
+
+# 
+![Democratización](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Apartheid.png)
+
+
+# Conclusiones
+
+Nótese que si $\mu$ se encuentra:
+
+- $0<\mu<\mu^{**}$ $\longrightarrow$ Revolución
+- $\mu^{**}<\mu<\mu^{*}$ $\longrightarrow$ Democracia
+- $\mu^{*}<\mu<\theta$ $\longrightarrow$ Promesa Redistribución
+- $\theta<\mu<1$ $\longrightarrow$ No Revolución
+
+
+![Parámetros](C:/Users\Admin\Documents\GitHub\econ-pol\cursado\filminas\2024\práctico\practico_12-9\Imágenes\Democratización.png)
+
+
+
+
+

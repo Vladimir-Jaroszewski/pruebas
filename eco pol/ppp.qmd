@@ -1,0 +1,49 @@
+---
+title: "Clase Práctica - Ley de Oferta"
+author: "Autor"
+date: "Fecha"
+format: 
+  beamer:
+    theme: "default"
+    colortheme: "seahorse"  # Elige el tema de color adecuado
+    fonttheme: "default"
+    toc: false  # Tabla de contenidos si es necesario
+    slide-level: 2
+    link-external-newwindow: true
+    pdf-engine: xelatex
+    highlight-style: "tango"
+    header-includes:
+      - '\input{presentation_style.tex}'
+---
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+## Prueba
+
+En esta clase, discutiremos la Ley de Oferta.
+
+# Ley de Oferta
+\begin{block}{Teorema (Ley de Oferta)}
+Para todo par de precios \( p, p' \geq 0 \), tal que \( p \neq p' \), la oferta de la firma verifica:
+\[
+(p - p') [ y(p) - y(p')] \geq 0
+\]
+\end{block}

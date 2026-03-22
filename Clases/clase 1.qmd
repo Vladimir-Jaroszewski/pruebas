@@ -1,0 +1,212 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Primer Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Índice"
+---
+
+# Base analítica de las Cuentas Nacionales 
+
+## Identidades macroeconómicas
+
+\begin{block}{Primera identidad macroeconómica: OA=DA}
+
+\begin{equation}
+PX + PM^c = PC + PG + PE + PI + P\Delta S \tag{1}
+\end{equation}
+\end{block}
+
+
+
+Donde:
+
+-   $P$: Precios
+
+-   $X$: Producto Real
+
+-   $M^c$: Importaciones competitivas o de consumo
+
+-   $C$: Consumo Real
+
+-   $G$: Gasto del gobierno
+
+-   $E$: Exportaciones
+
+-   $I$: Inversion (nuevos bienes de capital)
+
+-   $\Delta S$: Variaciones en el stock de existencias
+
+## Identidades macroeconómicas
+
+\begin{block}{Segunda identidad macroeconómica:}
+El producto se agota en la remuneración a los factores productivos
+  \begin{equation}
+PX=wL+vN+rK+T^{\text{ind}}+PM^n\tag{2}
+  \end{equation}
+\end{block} 
+
+Donde:
+
+-   $L$: Factor Trabajo
+
+-   $N$: Acciones
+
+-   $K$: Capital
+
+-   $w$: Salarios
+
+-   $v$: Dividendos
+
+-   $r$: Remuneración Bruta al capital
+
+-   $T^{\text{ind}}$: Impuestos Indirectos
+
+-   $M^c$: Importaciones no Competitivas (ingresan al proceso productivo)
+
+## Identidades macroeconómicas
+
+Ademas: Siendo $\pi$ la tasa neta de rentabilidad y $d$ la tasa de depreciación $$r=\pi+d$$
+
+\begin{block}{Tercera identidad macroeconómica:}
+  \begin{equation}
+PBI_{pm}=PC+PG+PE+PI+P\Delta S-(PM^c+PM^n)\tag{3}  
+  \end{equation}
+\end{block}
+
+Obtenemos la ecuacion del $PIB_{pm}$ mediante el costo de los factores: $$ PBI_{pm}=wL+vN+rK+T^{\text{ind}} \tag{4}$$
+
+Lo que es igual a: $$ PBI_{pm}=YN_{cf}+T^{ind} $$
+
+## Identidades macroeconómicas
+
+\begin{block}{Cuarta identidad macroeconómica: Relación Ahorro-Inversión.}
+  \begin{align}
+Y^d&=Y^P-T^{dir}-S^{cor} \tag{5} \\
+  Y^d&=PC+S^{piv}\tag{6}
+  \end{align}
+\end{block}
+
+
+ Donde:
+
+- $Y^d$: Ingreso disponible
+- $Y^p$: Ingreso personal
+- $S^{cor}$: Ahorro Corporativo
+- $S^{priv}$:Ahorro Privado
+- $BND$: Beneficios no distribuidos
+- $D$: Depreciaciones(forma de ahorro para restituir capital)
+
+Ademas tenemos que $S^{cor}= BND +D$
+
+## Identidades macroeconómicas
+
+\begin{block}{Quinta identidad macroeconómica:}
+\begin{align}
+\text{Ahorro Externo:}\  & S_X = PM^c + PM^n - PE \tag{7} \\
+\text{Ahorro del Gobierno:}\  & S_G = T^{ind} + T^{dir} - PG \tag{8}
+\end{align}
+\end{block}
+
+
+Sumando Ahorros: 
+$$
+\begin{aligned} 
+&S^{priv}+S^{cor}+SX+SG=\\&(Y^p-T^{dir}-PC)+(BND+D)+(PM^c+PM^n-PE)+\\&(T^{ind}+T^{dir}-PG)
+\end{aligned} \tag{9}
+$$
+
+## Identidades macroeconómicas
+
+Reescribiendo $(9)$: $$
+\begin{aligned} 
+&S^{priv}+S^{cor}+SX+SG=\\&(Y^p-T^{dir}-PC)+(BND+D)+(PM^c+PM^n-PE)+\\&(T^{ind}+T^{dir}-PG)
+\end{aligned} \tag{9}
+$$
+
+Operando el miembro derecho de $(9)$: $$
+\begin{aligned}
+&=(Y^p+BND+D)+T^{ind}+PM^n+PM^c-PC-PE-PG\\ &=(YIB_cf+T^{ind}+PM^n)+PM^c-PC-PE-PG
+\end{aligned}\tag{10}
+$$
+
+Por lo tanto $(9)$ queda : $$ S^{priv}+S^{cor}+SX+SG=PX+PM^c-PC-PE-PG\tag{9'}$$
+
+## Identidades macroeconómicas
+
+**Recordando la primera idendtidad macroeconomica** $(1)$ y openrando en ella tenemos: $$PX+PM^c-PC-PE-PG=PI+P\Delta S \tag{1'}$$ Reemplazando $(1')$ en $(9')$ tenemos: $$S^{priv}+S^{cor}+SX+SG=PI+P\Delta S\tag{10}$$ por lo que hemos llegado a \fbox{$S=I$}, definiendo: $$PI+P\Delta S=IBI$$
+
+# Balance Consolidado del Sector Financiero 
+## 
+
+![Balance Consolidado del Sector Financiero](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\monetarias.PNG)
+
+# Cuentas Monetarias
+
+## Sistema en terminos de ecuaciones 
+
+\
+Activos totales del Sistema Monetario $=F+D+S+L$
+
+\
+Pasivos totales del Sistema Monetario $=C+q1+q2$
+
+\
+Sector Privado: $C+Q1+Q2=S+L+Z$
+
+\
+Bancos Comerciales $q1+q2+L=Q1+Q2+R$
+
+\
+Banco Central: $F+D+S+R=C+q1+q2$
+
+\
+Resto del Mundo: $Z=F$
+
+## Sistema en terminos de ecuaciones
+
+Oferta Monetaria: $M$ $$ \begin{aligned}
+M_1 &= C + Q1 \\
+M_2 &= C + Q1 + Q2
+\end{aligned} $$
+
+Base Monetaria $=C+q1+q2$
+
+\
+Siendo los redescuentos $q=q1+q2$ , los depósitos $Q=Q1+Q2$.
+
+Definiendo los redescuentos y depósitos en relación al total de depósitos tenemos: $r=q/D$ y $c=C/D$
+
+Multiplicado monetario: $m.m$
+
+$$
+\frac{M}{B}=\frac{C+Q}{C+q}=\frac{1+c}{c+r}=m.m
+$$\
+
+## Sistema en terminos de ecuaciones
+
+
+**Capacidad de Préstamo:** Refiere al total de crédito que el sistema financiero pone a dispocision del sector privado. $$L=Q-q\tag{10}$$
+
+sumando y restando $C$ en $(10)$:
+
+$$
+\begin{aligned}
+&L=(Q+C)-(q-C)\\ 
+&L=M-B 
+\end{aligned}
+$$ Por lo tanto: $$
+\begin{aligned}
+&L=m.m B-B\\
+&L=(m.m-1)B\\
+&L=\frac{1-r}{C+r}B
+\end{aligned}
+$$
+
+
+
+

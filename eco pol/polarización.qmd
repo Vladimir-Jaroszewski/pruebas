@@ -1,0 +1,184 @@
+---
+title: "Economía Política"
+subtitle: "Unidad"
+author: |
+  **Sebastián Freille**  
+  sfreille@unc.edu.ar  
+  Licenciatura en Economía  
+  FCE–UNC
+format:
+  beamer:
+    theme: "Boadilla"
+    colortheme: "default"
+    slide-level: 2
+    aspectratio: 169
+    fontsize: 11pt
+    link-citations: true
+    linkcolor: blue
+    number-sections: true
+    toc: true
+    toc-depth: 1
+    toc-title: "Contenidos"
+    include-in-header: "header.tex"
+mainfont: "Latin Modern Sans"
+---
+
+# **Polarización y Redes Sociales** {background="#CAA811"}
+
+DOES SOCIAL MEDIA CAUSE POLARIZATION? EVIDENCE FROM ACCESS TO TWITTER ECHO CHAMBERS DURING THE 2019 ARGENTINE PRESIDENTIAL DEBATE (Di Tella, Gálvez, Schagrodski. 2021)
+
+## Motivación: 
+
+### ¿Cual fue el papel de las redes sociales en el fomento de la polarización durante el debate presidencial de 2019 en Argentina?
+
+Hay una creciente preocupación acerca de que las personas vivimos dentro de "Burbujas partidistas", con escasa exposición a quienes tienen una inclinación ideológica diferente. 
+
+La polarización podría tener consecuencias negativas para la democracia, el aumento de prejuicios y estancamiento legislativo.
+
+\ 
+
+Culpables $\longrightarrow$ **Redes sociales??**
+
+## Redes Sociales
+
+Diversas investigaciones señalan que plataformas como **Facebook** o **Twitter** tienden a generar **“cámaras de eco”**, espacios donde los usuarios están expuestos principalmente a información, opiniones e ideas que refuerzan sus creencias y perspectivas previas.  
+
+En estos entornos digitales, el intercambio de puntos de vista distintos se ve limitado, lo que puede reducir la diversidad informativa y favorecer la polarización de las opiniones.
+
+## Experimento de Campo
+
+$\implies$ **Estudiar el papel de las redes sociales en el fomento de la polarización en presencia de un evento políticamente relevante: el debate presidencial argentino de 2019**
+
+Se han propuesto dos estrategias para reducir el impacto aparente de las redes sociales en la polarización:
+
+a. limitar el acceso de las personas a las cámaras de eco
+b. garantizar que a través de las cámaras de eco reciban información que de otro modo no recibirían (datos "contra-actitudinales")
+
+## Experimento de Campo (Cont.)
+
+>
+Se centran en la forma en que una persona que ha formado una cámara de eco política en Twitter en el período previo a las elecciones reacciona a su ausencia en el momento preciso en que presumiblemente es más valiosa
+
+*Experimento:* "el día del debate presidencial, se invitó a un grupo de sujetos a acudir a un lugar neutral y participar en un estudio académico a cambio de una compensación económica".
+
+## Experimento de Campo (Cont.)
+### Pasos:
+
+1. Los participantes debieron completar un breve cuestionario y proporcionar una muestra de saliva
+2. Fueron asignados aleatoriamente a cuatro grupos $\implies$ **Tratamiento**
+3.  Los participantes debieron responder preguntas sobre polarización y el interés en la política y proporcionar una segunda muestra de saliva.
+
+
+
+## Tipos de participantes:
+
+- Usuarios de Twitter
+  - Segregados
+  - No segregados
+
+- No usuarios de Twitter(asignados a grupos 1 y 2)
+  - Segregados
+  - No segregados
+
+## Segregación Usuarios Twitter
+
+Para los participantes de Twitter, Se estima su preferencias de partido mediante el análisis de sus interacciones con esta red y combinando la información recopilada con las respuestas del cuestionario previo al tratamiento se obtiene la segregación de los individuos.
+
+![Notas. La cifra incluye las 95 cuentas semilla y las 132.503 cuentas no semilla a las que siguen. Una escala de colores continua refleja la orientación política prevista por los usuarios. El azul claro (amarillo) indica una cuenta totalmente  inclinada hacia FdT (JxC). El tamaño de cada nodo refleja su grado de entrada. ](../imagen/2.PNG)
+
+## Segregación de Usuarios No Tuiteros
+
+El enfoque metodológico busca identificar, dentro del grupo de **usuarios no tuiteros**, a aquellos individuos que, según sus respuestas previas al tratamiento, **presentarían una tendencia a segregarse** en caso de incorporarse a Twitter.  
+
+Para ello, se emplea un **modelo de aprendizaje supervisado** estimado a partir de los datos observados en los usuarios activos de Twitter, el cual permite predecir comportamientos de segregación en el grupo no tuitero.
+
+
+## Segregación de participantes
+
+![](../imagen/1.PNG)
+
+## Asignación de grupos y TRATAMIENTO
+
+Los participantes fueron divididos en cuatro grupos:
+
+1.	**Documentary group**: Apagaron sus celulares y vieron un corto documental sobre las instituciones políticas argentinas.
+
+2.	**Debate-Only**: Apagaron sus celulares, pero vieron la transmisión en vivo del debate presidencial. 
+
+3.	**Twitter-Allowed**: Pudieron ver el debate en condiciones normales, usando sus celulares libremente y accediendo a Twitter. 
+
+4.	**Twitter-Interact**: Pudieron ver el  debate y utilizar sus celulares, pero en este caso, se les pidió que interactuaran con una "cámara de eco" que compartía contenido polarizado ("contra-actitudinales"). 
+
+
+## Segunda Encuesta
+
+Después de los tratamientos, los sujetos tuvieron que responder a una serie de preguntas estándar sobre la polarización y el interés en la política, así como proporcionar una segunda muestra de saliva.
+
+
+## Indices de polarización:
+
+1. **Índice Élite:** Desagrado que los participantes sienten hacia las élites del partido externo. *Dos componentes principales: Percepción de amenaza y Comparación de rasgos positivos*.
+
+2. **Índice de Distancia Social:** Desagrado que los ciudadanos sienten hacia los partidarios del partido opuesto. *Tres componentes: Familia, Socialización,	Colaboración laboral*.
+
+3. **Índice de Partidismo:** La convicción que tienen los participantes sobre su elección política. *Dos componentes: Convicción del voto,	Dispersión de preferencias*.
+
+## Indices de polarización (Cont.):
+
+4. **Índice Institucional:** Desconfianza que los participantes sienten hacia las instituciones. *Tres componentes: Credibilidad de acusaciones de fraude, Desacuerdo con sentencias judiciales, Lealtad vs. competencia*.
+
+5. **Índice de Compromiso:** Grado de disposición de los participantes a involucrarse en el proceso electoral. *Dos componentes:	Participación activa,Persuasión*.
+
+6. **Índices Combinados:**Un índice de polarización que combina diferentes dimensiones.
+
+
+# Resultados 
+
+## Fuentes de Información
+
+Hay 3 tipos de datos obtenidos:
+
+- Resultados estándar basados en encuestas.
+- Medida de los niveles de cortisol.  
+- Y para los usuarios de Twitter, información sobre su actividad en Twitter. 
+
+## Polarización
+
+![Notas:Todas las variables se normalizan para que la distribución de grupos permitidos por Twitter no segregada tenga una media de 0 y una desviación estándar de 1. Las barras de error reflejan intervalos de confianza del 90%](../imagen/3.PNG)
+
+## Efectos del tratamiento 
+
+![](../imagen/4.PNG)
+
+## Efectos del tratamiento 
+
+- Para usuarios de Twitter no segregados, no hay diferencias en el índice de polarización combinado para ningún tratamiento.
+- Para de usuarios segregados de Twitter, observamos que el **índice de polarización combinado más bajo que medimos se encuentra en el tratamiento Twitter-Permitido.**
+  - aunque la diferencia con el del grupo Documental no es estadísticamente significativa.
+  - la diferencia en los niveles de polarización entre Twitter-Permitido y los otros dos tratamientos (Twitter-Solo Debate y Twitter-Interact) son cómodamente significativas
+- Para no usuarios de Twitter, **los niveles de polarización agregados son similares en los dos tratamientos** tanto en la muestra de usuarios segregados como en la no segregada.
+
+
+## Conclusiones
+
+- El efecto del debate, aproximado mediante la comparación de los dos tratamientos disponibles (Solo Debate vs Documental) sugiere que el evento no cambia los niveles de polarización. Curiosamente, tampoco lo hace con los usuarios de Twitter. 
+- Para no usuarios de Twitter el **grupo segregado está significativamente más polarizado que el no segregado**, lo que sugiere que la polarización no es exclusivamente un fenómeno en línea.
+- Parece que, en promedio, hay una polarización significativamente menor en los no Twitter en relación con la muestra de Twitter. (Los usuarios de Twitter son mas "politizados"?).
+- Para sujetos que ya estaban en cámaras de eco muestran una mayor polarización para el grupo de Solo Debate como para el de Twitter-Interact.
+
+## Conclusiones
+
+- Para el grupo de Twitter-Interact, también hay un aumento en ΔCortisol (lo que sugiere que las tareas involucradas fueron una fuente de estrés para estos participantes) y en la segregación de ΔContact (lo que sugiere que sus interacciones en Twitter se volvieron más polarizadas).  
+
+
+**Nuestro principal resultado puede interpretarse como la identificación de circunstancias en las que la presencia de una cámara de eco puede verse como despolarizante. ¿A qué se debe? El mecanismo que imaginamos es que las personas que están interesadas en la política "demanden" cámaras de eco porque les es útil cuando tienen que interpretar un evento político. **
+
+- En todo caso, hay alguna evidencia débil de una reducción en la polarización de sus contactos de Twitter en la condición contra-actitudinal.
+- Nuestra conjetura es que las cámaras de eco de Twitter que los sujetos han formado con otros usuarios de Twitter de ideas afines les son útiles cuando tienen que interpretar un evento político
+
+
+
+
+
+
+

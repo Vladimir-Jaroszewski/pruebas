@@ -1,0 +1,494 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{Boadilla}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\input{header(graficos).tex}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Programación Económica y Contabilidad Social},
+  pdfauthor={Vladimir Jaroszewski},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Programación Económica y Contabilidad Social}
+\subtitle{Tercera Clase}
+\author{Vladimir Jaroszewski}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\renewcommand*\contentsname{Indice}
+\begin{frame}[allowframebreaks]
+  \frametitle{Indice}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\begin{frame}{Introduccion al Modelo GCyD}
+\phantomsection\label{1}
+\begin{block}{Primeras consideraciones}
+\phantomsection\label{primeras-consideraciones}
+Se trata de un modelo real de crecimiento que refleja la interrelación
+de los distintos agentes de la economía (familias, sector externo y
+gobierno).
+
+Se representa al modelo mediante ecuaciones de comportamiento,
+tecnológicas, de definición e institucionales.
+\end{block}
+\end{frame}
+
+\begin{frame}{Introduccion al Modelo GCyD}
+\phantomsection\label{introduccion-al-modelo-gcyd}
+\begin{myblock}{Supuestos Principales}
+
+\begin{itemize}
+    \item \textbf{Ley de Walras:} "Dada la existencia de n mercados, si n-1 mercados están en equilibrio, entonces el mercado n también lo estará".
+    \item Sector externo
+    \item \textbf{No entiendo}
+    \item Existe sustitución entre factores productivos \textbf{ver}
+    \item Comportamiento oligopólico de los agentes $\longrightarrow$ regla del mark-up.
+\end{itemize}
+
+\end{myblock}
+\end{frame}
+
+\begin{frame}{El modelo bajo función Leontieff y regla de mark-up}
+\phantomsection\label{2}
+Dada la naturaleza oligopolica de los agentes la formacion de precios
+puede establecerse mediante la regla del mark-up. Por lo que los precios
+estan relacionados mediante una funcion con los factores productivos.
+
+~
+
+\begin{myblock}{Supuestos adicionales:}
+
+  \begin{itemize}
+    \item Los insumos intermedios o materias primas son en su totalidad importados.
+    \item Coeficientes fijos $\alpha_j$
+\end{itemize}
+    
+\end{myblock}
+\end{frame}
+
+\begin{frame}{Modelo en ecuaciones}
+\phantomsection\label{modelo-en-ecuaciones}
+\[
+P=[a_l\ W (1+t_l)+a_m\ P_m](1+\theta)+\ t_v[a_l\ W +\theta(a_l\ W(1+t_l)+a_mP_m)]
+\tag{1}
+\]
+
+Donde:
+
+\begin{itemize}
+\item
+  \(P\): Es el nivel general de precios.
+\item
+  \(\alpha_j\): Estos coeficientes se refieren a los requiriemientos
+  técnicos de producción.
+
+  \begin{itemize}
+  \item
+    \(\alpha_L\) es el de mano de obra por unidad de producto y
+  \item
+    \(\alpha_m\) es el de insumos importados por unidad de producto.
+  \end{itemize}
+\item
+  \(W\): Son los salarios.
+\item
+  \(t_j\): Refiere a las alícuotas impositivas.
+
+  \begin{itemize}
+  \item
+    \(t_L\) la alícuota de aportes patronales y
+  \item
+    \(t_v\) la alícuota del IVA
+  \end{itemize}
+\item
+  \(P_m\): Es el precio de la materia prima importada.
+\item
+  \(\theta\): Es la tasa de ``mark-up'' sobre los costos de la mano de
+  obra y materias primas importadas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section}
+La expresión \((1)\) puede reescribirse como: \[
+P=[a_L\ W (1+t_L)+a_m\ P_m]\ [1+\theta (1+t_v)]+ t_v\ \alpha_L\ W
+\tag{1'}
+\] Los precios de las importaciones de insumos (no competitivas)
+\[ P_m=P^*_m(1+t_m)\ t \tag{2}
+\] Sea
+
+\begin{itemize}
+\tightlist
+\item
+  \(t\) el tipo de cambio.
+\item
+  \(t_m\) los aranceles a las importaciones.
+\end{itemize}
+
+\hfill\break
+La demanda de factores productivos: \[
+L=a_L X
+\tag{3}
+\] \[
+K=b_K X
+\tag{4}
+\]
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-1}
+Las demandas de factores productivos \(K\) y \(L\) en relacion al
+producto de la economía mediante un \textbf{coeficiente fijo} determina
+que \fbox{la elasticidad de sustitucion entre $L$ y $K$ es cero$^1$}.
+
+El nivel de capital \(K\) esta determinado por \(K=K_n+K_m\),
+
+EL capital de origen nacional: \[K_n=b_n K \tag{5} \]
+
+El capial importado: \[
+K_m=b_m K
+\tag{6}
+\] Relaciones respecto a la demanda de factores productivos:
+
+\begin{itemize}
+\tightlist
+\item
+  \(b_k= K/X\) es la relacion k-producto.
+\item
+  \(b_n=K_n/K\)
+\item
+  \(b_m=K_m/K\)
+\end{itemize}
+
+Por lo que el precio del capital es: \[
+P_K=b_nP_n+b_mP_m 
+\tag{7}
+\]
+
+\footnote{Supuesto del modelo de tipo leontieff.}
+\end{frame}
+
+\begin{frame}{Regla de mark-up}
+\phantomsection\label{regla-de-mark-up}
+\begin{block}{¿Como se determina el Mark-up?}
+\phantomsection\label{como-se-determina-el-mark-up}
+El mark-up se refiere al margen de beneficios.
+
+\[
+\begin{aligned}
+P_KK(r+d)&=\theta[a_lW(1+t_L)+a_mP_m]X\\
+(r+d)&= \frac{\theta\ a_L[W(1+t_L)+a_m\ P_m]}{P_K}\ K
+\end{aligned}\tag{8}
+\] Donde:
+
+\begin{itemize}
+  \item[\textbullet] $r$ es la rentabilidad neta del stock de capital.
+  \item[\textbullet] $d$ es la tasa de depreciación exogena.
+  \item[\textbullet] Por lo que $(r+d)$ es la tasa de rentabilidad bruta del capital.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-2}
+Recordemos la ecuacion del producto en terminos nominales: \[
+X=C+I+G+\Delta\ S+XN \tag{9}
+\] Si \((9)\) es en terminos reales multiplicando por \(P\) obtenemos el
+producto real: \[
+PX=PC+PI+PG+P \Delta\ S+P\ XN \tag{10}
+\]
+
+La ecuacion de la inversion queda definida: \[
+I=(g+d)\ K_n \tag{11}
+\] Donde:
+
+\begin{itemize}
+  \item[\textbullet] $g$ es la tasa de inversion neta en capital nacional
+\end{itemize}
+
+Notese que la ecuacion \((11)\) representa los animals spirits
+keynesianos.
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-3}
+\[
+C=C_0+c_wY_{dW}+c_PY_{dp}
+\tag{12}
+\] Donde:
+
+\begin{itemize}
+ \item[\textbullet]$C_0$ es el consumo autonomo
+ \item[\textbullet]$c_w$ es la propension marginal a consumir de los asalariados
+ \item[\textbullet]$Y_{dW}$ es el ingreso disponible de los asalariados
+ \item[\textbullet]$c_P$ es la propension marginal a consumir de los no asalariados
+ \item[\textbullet]$Y_{dp}$ es el ingreso disponible de los no asalariados
+\end{itemize}
+
+La ecuacion \((12)\) es la funcion de consumo privada, de la forma
+``Kaldoriana'', es deicir, el consumo de la sociedad depende del ingreso
+disponible de asalariados y no asalariados.
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-4}
+El consumo esta compuesto por el consumo nacional y el importado
+\(C=C_n+C_m\)
+
+\[
+P\ C_n=c_n\ C
+\tag{13}
+\] \[
+P_{mc}\ C_m=c_m\ C
+\tag{14}
+\] Donde:
+
+\begin{itemize}
+  \item[\textbullet] $C_m$ es el consumo privado en terminos reales
+  \item[\textbullet] $P_{mc}$ es el precio de bienes de comsumo importados
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-5}
+Podemos definir al ingreso de los asalariados como: \[
+Y_W=(1-t_{wL})W\ a_L\ X
+\tag{15}
+\] Donde:
+
+\begin{itemize}
+  \item[\textbullet] $t_{wl}$ es el impuesto al trabajo
+\end{itemize}
+
+El ingreso de los no asalariados es:
+
+\[
+\begin{aligned}
+Y_p=\ &\Theta\ [a_L\ W (1+t_L)+ a_m\ P_m](X-E)+\\ 
+&E\ [P_E\ (1-t_s)\ t- a_L\ W (1-t_L)- a_m\  P_m]
+\end{aligned} \tag{16}
+\]
+
+Donde:
+
+\begin{itemize}
+  \item $t_{s}$ son las retenciones a las exportaciones
+  \item $P_{E}$ es el precio de las exportaciones
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-6}
+Notese que el \(Y_p\) es distinto en el mercado interno al del mercado
+internacional, dado que para que sean iguales debe darse:
+\(P=P_E (1-t_s)t\) y ademas debiera existir perfecto arbitraje.
+
+Tanto los asalariados como no asalariados son gravados con el impuesto a
+las ganancias.
+
+\[
+T_W=t_W Y_W
+\tag{17}
+\]
+
+\[
+T_p=t_p Y_p
+\tag{17}
+\]
+
+Donde: - \(t_w\) es la alicuota a los asalariados. - \(t_p\) es la
+alicupta a los no asalariados.
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-7}
+\begin{block}{Ingresos disponibles}
+\phantomsection\label{ingresos-disponibles}
+El ingreso disponible de los asalariados se obtiene de quitar al ingreso
+bruto \(Y_W\) los impuestos directos \(T_W\) y agregar las
+transferencias \(R\). \[
+Y_{dW}= Y_W -T_W + R
+\tag{18}
+\]
+
+Para obetener el ingreso disponible de los no asalariados, hay que
+deducir del ingreso bruto \(Y_p\), los impuestos directos \(T_p\), los
+intereses de deuda externa \(DE_p\  i_{ext}\), las depreciaciones de
+capital \(d\ K\ P^k\) y agregar los intereses que cobran por deuda
+interna \(DI\ i_{int}\):
+
+\[
+Y_{dp} = Y_p - T_p - DE_p\ i_{ext} + DI\ i_{int} - d\ K\ P^K
+\tag{19}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-8}
+Existe una ecuación de movimiento del capital:
+
+\[
+K (t + 1) = K (1-d) t +I + M_k
+\tag{20}
+\]
+\end{frame}
+
+
+
+
+\end{document}

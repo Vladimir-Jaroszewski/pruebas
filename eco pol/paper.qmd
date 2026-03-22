@@ -1,0 +1,171 @@
+---
+title: "Eco pol"
+subtitle: ""
+author: ""
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Indice"
+---
+
+# Modelo de votacion probabilistica
+
+## TVM: Realismo y ajuste
+
+- Sabemos que el TVM es útil pero en muchas ocasiones supuestos no aplicables
+- Tema clave $\longrightarrow$ multidimensional de decisiones políticas
+  - El modelo de votación probabilística (MVP) permite relajar algunos supuestos e incorporar más realismo
+
+## MVP: Intuición y supuestos
+
+- Recordemos que
+\begin{align}
+p_{A}^{i}(q_{A},q_{B})=
+\begin{cases}
+1 & si \quad V^{i}(q_{A}) > V^{i}(q_{B}) \\
+\frac{1}{2} & si \quad V^{i}(q_{A}) = V^{i}(q_{B}) \\
+0 & si \quad V^{i}(q_{A}) < V^{i}(q_{B}) \\
+\end{cases}
+\end{align}
+- Es decir, *prob* de que $i$ vote por $A$ cuando plataformas son $(q_{A},q_{B})$ no es continua --saltos discretos
+  - Fn objetivo de candidatos discontinuas en espacio de políticas
+
+## MVP: Intuición y supuestos (cont.)
+
+- Por esto, candidatos incentivo a proponer nuevas $q_{i}$ repetidamente
+  - Proceso continúa *ad-infinitum* si: 1) preferencias no son de pico único; 2) manipulación de agenda y voto estratégico
+- El MVP suaviza estas funciones discontinuas aún con espacios de po´litica multidimensionales
+
+## MVP: Intuición y supuestos (cont.)
+
+- Diferentes motivaciones ("microfundamentos") para el MVP
+- Individuos motivados por dos dimensiones:
+  1. Políticas --$q_{i}$
+  2. Ideología --$\sigma^{ij}$
+- NOTA: Segunda dimensión No necesariamente debe ser "ideología" en sentido estricto
+  - Puede ser cualquier elemento que haga que un votante tenga una *tendencia* a votar por tal o cual candidato
+
+## MVP: Modelo básico
+
+- Sociedad compuesta por número $J$ de grupos diferentes. Población total normalizada a 1. Cada grupo tiene una cantidad/fracción $\alpha_{j}$ de individuos tal que $\sum_{j=1}^{J}\alpha_{j}=1$
+- Individuos **dentro de cada grupo** son iguales con excepción de su preferencia "ideológica"
+- Dos candidatos $A$ y $B$ compiten ofreciendo políticas contenido en el vector **$q$**.
+
+## MVP: Modelo básico (cont.)
+
+- Sea $\pi_{P}^{j}$ la fracción de votantes en grupo $j$ que vota por
+  $P$ con $P \in {A,B}$.  Proporción de votos $\pi_{P}$ que espera obtener:
+
+\begin{align}
+\pi_{P}=\sum_{j=1}^{J}\alpha_{j}\pi_{P}^{j}
+\end{align}
+
+- En MCE Downs, forma de cada $\pi_{P}^{j}$ parecida anterior pero
+  saltos de continuidad. Si es *unidimensional*, gana $q_{m}$. Si es *multidimensional*, ciclos interminables
+
+## MVP: Preferencias
+
+- Cada $i$ en $j$ tiene las preferencias
+\begin{align}
+V^{ij}=V^{j}(\mathbf{q})+\sigma^{ij}(P)
+\end{align}
+- $V^{j}(\mathbf{q})$ es utilidad indirecta de individuos de
+  grupo $j$ y $\sigma^{ij}(P)$ beneficios para votante $i$ en grupo
+  $j$ si gana $P$. Sea $p_{A}^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})$ la *prob* que $i$ de $j$ vote por $A$:
+
+\begin{align}
+p_{A}^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})=
+\begin{cases}
+1 & si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) > V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+\frac{1}{2} & si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) = V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+0 & si \quad V^{j}(\mathbf{q}_{A})+\sigma^{ij}(A) < V^{j}(\mathbf{q}_{B})+\sigma^{ij}(B) \\
+\end{cases}
+\end{align}
+
+## MVP: Preferencias (cont.)
+
+- Definamos $\sigma^{ij}=\sigma^{ij}(B)-\sigma^{ij}(A)$ como la
+  **preferencia ideológica relativa por B**. Entonces: 
+  
+\begin{align}
+p^{ij}(\mathbf{q}_{A},\mathbf{q}_{B})=
+\begin{cases}
+1 & si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) \geq \sigma^{ij} \\
+\frac{1}{2} & si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) = \sigma^{ij}  \\
+0 & si \quad V^{j}(\mathbf{q}_{A})-V^{j}(\mathbf{q}_{B}) \leq \sigma^{ij}  \\
+\end{cases}
+\end{align}
+- Votante $i$ sólo votará por $A$ si los beneficios económicos que recibe *compensan* su preferencia ideológica
+- Fn objetivo de políticos se vuelve continua por incertidumbre sobre distribución de preferencias ideológicas
+
+# Adecuacion del modelo
+
+## MVP para Pol Compas
+
+La ecuacion clave es:
+$$
+V^{ij}=V^{j}(\mathbf{q})+\sigma^{ij}(P)
+$$
+Donde el $V^{ij}$ son las preferencias del individuo $i$ perteneciente al grupo $j$ por algun candidato.
+
+**Que pasa si la transformo en una funcion de perdida $L^{ij}$**
+
+Defino a la $L^{ij}$: Como la distancia de la ideologia del individuo y de su vector de politicas optimas, respecto a la ideologia  del candidato y al vector de politicas que proponga.
+
+$$
+L^{ij} =\alpha \sqrt{(\sigma^{ij}-\sigma^A)^2}\ +\beta \sqrt{(q^{ij}-q^A)^2}
+$$
+Ahora el individuo busca aquel candidato que mas cercano sea tanto para su ideologia como para vector de politicas optimas.
+
+
+## MVP para Pol Compas
+
+Suponiendo que $\alpha=\beta$, tenemos:
+
+$$
+L^{ij} = \sqrt{(\sigma^{ij}-\sigma^A)^2}\ +\sqrt{(q^{ij}-q^A)^2}
+$$
+
+Reemplazando por sus coordenadas: $\sigma^i=(X_I^i,Y_I^i)$ y $q^i=(X_q^i,Y_q^i)$, obtenemos
+
+$$
+L^{ij} = \sqrt{(X_I^i - X_I^A)^2+ (Y_I^i-Y^A_I)^2}\ +\sqrt{(X_q^i-X_q^A)^2+(Y_q^i-Y^A_q)^2}
+$$
+
+
+Donde el problema para el candidato se resuelve:
+
+$$
+\min _{(A,B)}{W^{ij}} = \min \left\{L_A^{ij}\ , \ L_B^{ij}    \right\}
+$$
+El individuo $i$ elige el candidato que una menor funcion de perdida le otorge. Es decir aquel que posee una distancia menor respecto a su ideologia y vector de politicas.
+
+## Procedimiento
+
+![Panel Ideologico](C:/Users\Admin\Documents\GitHub\pruebas\eco pol\pol compas\P + tend.png)
+
+Cada punto representa un posicionamiento ideologico de un individuo, el cual puede escribirse a traves de coordenadas $\sigma^i=(X_I^i,Y_I^i)$. podemos calcular esta distancia respecto a la ideologia de un candidato.
+
+## Perfil ideologico
+
+Como obtengo la ideologia del candidato, dos formas:
+
+- Creo un perfil ideologica en base al conocimiento del candidato
+- Utilizo la media(o mediana) de la ideologia de aquellos individuos que lo votaron.
+
+En el segundo metodo obtengo la diferencia de cada individuo respecto al posicionamiento 
+
+
+
+
+
+
+
+
+
+
+
+
+

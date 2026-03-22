@@ -1,0 +1,85 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Tercera Clase"
+author: "Vladimir Jaroszewski"
+format:
+  beamer:
+    theme: default
+    header-includes:
+    - \input{header(graficos).tex}
+  revealjs:
+    theme: league
+    slide-number: true
+    toc: false
+    toc-title: "Índice"
+editor: visual
+---
+\section{Lobby y conexiones políticas}
+
+ \begin{frame}\frametitle{Motivation I - Little money}
+    \begin{itemize}\itemsep 10pt
+      \begin{block}{Tullock's puzzle: Why is there so little money in
+          US politics?}
+In 1972, total campaign spending in federal elections was
+about \$200 million and total federal spending was \$400 bilion. In
+2000, total campaign spending was around \$3 billion while total
+federal government spending was around \$2 trillion.  The Federal government awarded \$134 billion in defense
+contracts in 2000 while defense contracting firms and indviduals associated with
+those firms donated only around \$13.2 million. In sum, value
+of policy much larger than campaign contributions. 
+\end{block}
+\begin{block}{What about Argentina?}
+In 2007, the national government awarded \$886 million in all public
+contracts whereas the total amount of campaign contributions
+\textit{by all firms and individuals} were
+\$15 million. The figures for 2013 were \$1.62 billion and \$18 milion, respectively
+  \end{block}
+    \end{itemize}
+  \end{frame}
+# 
+
+\begin{frame}\frametitle{Motivation II - Informal connections}
+  \begin{itemize}\itemsep 10pt
+  \item How do IGs influence politics and policies
+    in Argentina? 
+
+   \begin{figure}[ht]
+\centering
+    \includegraphics[width=0.6\linewidth, height=0.15\textwidth]{mcdonalds}
+  \caption{\small The day McDonalds Argentina ran out of ketchup}  \label{figure1}
+\vspace{ -5 mm}
+\end{figure}\vspace{-0.25cm}
+\item Delays in DJAI; problem was solved within a day or two when the then chief of
+  cabinet took notice of the situation.
+    \end{itemize} \vspace{-0.25cm}
+  \begin{block}{Channels of influence}
+  ``In Argentina there are two ways to exert influence: one, more
+  traditional, through formal meetings and opinion leaders, and
+  another, directly related to electoral campaigns and the amount of
+ \textit{under-the-table} contributions in exchange of future favors''
+ [Unnamed lobbist source. Link:
+ \href{https://www.lanacion.com.ar/1758062-lobby-empresario-el-poder-detras-del-poder}{La
+   Nacion}]
+  \end{block}
+  \end{frame}
+
+#
+
+\begin{frame}\frametitle{Motivation III - Policy relevance}
+  \begin{block}{Changes in political finance regime}
+There were three major reforms to the regime of political finance in
+Argentina in the last 15 years: the first was aimed at formalizing the
+mixed system of political finance (2002); the second sought to
+increase transparency and accountability (2007) and the third
+prohibited contributions from firms and other legal persons (2009). Little to
+no evidence as to how these changes impact on several outcomes. 
+  \end{block}
+  \begin{block}{Regulation of lobby activity}
+There is currently a draft for a project bill regulating the activity
+of interest groups. It is familiarly known as the project of ``Ley de
+Lobby'' although the official project merely extends on the current
+practice of recording hearings of interests. 
+    \end{block}
+\end{frame}
+
+# 

@@ -1,0 +1,41 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Segunda Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Indice"
+---
+
+# Sistema de cuentas Nacionales (Parte real)
+
+## Cuentas Naciónales
+
+\begin{block}{Existen 5 Cuentas}
+
+    1. Producto-Ingreso
+
+    2. Ahorro-Inversión
+    
+    3. Familias
+    
+    4. Gobierno
+    
+    5. Resto del Mundo
+    
+\end{block}
+
+## Estructura de las Cuentas Nacionales 
+
+![Fuentes-Ingreso](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\fuentes.PNG)
+
+La cuenta de Ahorro-Inversión y Producto-Ingreso son cuentas que deben cerrar con igualdad en entre Fuentes y Usos.
+
+## Cuentas Nacionales(Parte real)
+
+![Cuentas Nacionales](C:/Users\Admin\Documents\GitHub\Programacion\Clases\imagenes\balance.PNG)
+
+# Actividad sistema de Cuentas Nacionales.

@@ -1,0 +1,32 @@
+.quarto-title-block .quarto-title-banner {
+  padding-top: 1.5rem;
+  padding-bottom: 0.1rem;
+}
+
+
+.title-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+}
+
+.meta-text{
+  display:flex;
+  flex-direction:column;
+  gap: 0.2rem;
+}
+
+.subtitle-line1{
+  font-size: 1.1rem;
+}
+
+.subtitle-line2{
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.logo{
+  height: 110px;
+  width: auto;
+}

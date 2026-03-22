@@ -1,0 +1,73 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Sexta Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Índice"
+---
+# Polarización y Redes Sociales
+## paper
+
+DOES SOCIAL MEDIA CAUSE POLARIZATION? EVIDENCE FROM ACCESS TO TWITTER ECHO CHAMBERS DURING THE 2019 ARGENTINE PRESIDENTIAL DEBATE (Di Tella, Gálvez, Schagrodski. 2021)
+
+## Motivación: 
+
+### ¿Cual fue el papel de las redes sociales en el fomento de la polarización durante el debate presidencial de 2019 en Argentina?
+
+Hay una creciente preocupación hacerca de que las personas vivimos dentro de "Burbujas partidistas", con escasa exposición a quienes tienen una inclinación ideológica diferente. 
+
+La polarización podría tener consecuencias negativas para la democracia, el aumento de prejuicios y estancamiento legislativo.
+
+\ 
+
+Culpables $\longrightarrow$ **Redes sociales??**
+
+## Redes Sociales
+
+Opiniones indican que redes sociales como Facebook o Twitter a través de las "Cámaras de Eco" limitan el acceso a nueva y variada información. 
+
+Las **cámaras de eco** son entornos, especialmente en redes sociales, donde las personas están expuestas principalmente a opiniones, ideas y contenidos que refuerzan nuestras creencias y puntos de vista preexistentes.
+
+## Experimento de Campo
+
+$\implies$ **Estudiar el papel de las redes sociales en el fomento de la polarización en presencia de un evento políticamente relevante: el debate presidencial argentino de 2019**
+
+Se han propuesto dos estrategias para reducir el impacto aparente de las redes sociales en la polarización:
+
+a. limitar el acceso de las personas a las cámaras de eco
+b. garantizar que a través de las cámaras de eco reciban información que de otro modo no recibirían (datos "contra-actitudinales")
+
+## Experimento de Campo (Cont.)
+
+**Se centran en la forma en que una persona que ha formado una cámara de eco política en Twitter en el período previo a las elecciones reacciona a su ausencia en el momento preciso en que presumiblemente es más valiosa**
+
+*Experimento:* "el día del debate presidencial, se invitó a un grupo de sujetos a acudir a un lugar neutral y participar en un estudio académico a cambio de una compensación económica".
+
+## Experimento de Campo (Cont.)
+### Pasos:
+
+1. Los participantes debieron completar un breve cuestionario y proporcionar una muestra de saliva
+2. Fueron asignados aleatoriamente a cuatro grupos $\implies$ **Tratamiento**
+3.  Los participantes debieron responder preguntas sobre polarización y el interés en la política y proporcionar una segunda muestra de saliva.
+
+
+
+## Tipos de participantes:
+
+- Usuarios de Twitter
+  - Segregados
+  - No segregados
+
+- No usuarios de Twitter(asignados a grupos 1 y 2)
+  - Segregados
+  - No segregados
+
+## Segregación Usuarios Twitter
+
+Para los participantes de Twitter, Se estima su preferencias de partido mediante el análisis de sus interacciones con esta red y combinando la información recopilada con las respuestas del cuestionario previo al tratamiento se obtiene la segregación de los individuos.
+
+![Notas. La cifra incluye las 95 cuentas semilla y las 132.503 cuentas no semilla a las que siguen. Una escala de colores continua refleja la orientación política prevista por los usuarios. El azul claro (amarillo) indica una cuenta totalmente  inclinada hacia FdT (JxC). El tamaño de cada nodo refleja su grado de entrada.](C:\Users\Admin\Documents\GitHub\pruebas\eco pol\imagen\2.PNG)

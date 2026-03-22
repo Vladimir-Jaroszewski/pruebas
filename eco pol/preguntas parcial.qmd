@@ -1,0 +1,111 @@
+---
+title: "Untitled"
+format: pdf
+editor: visual
+---
+
+# Unidad 1
+
+## Choise
+
+-   Las políticas adoptadas en la practica no suelen ser optimas porque:
+    1.  Hay heterogeneidad en los intereses de los invidividuos**(la heterogen da lugar a las restricciones pol)**
+    2.  Los agentes no basan sus decisiones en espectitivas e incentivo
+    3.  **Existen restricciones políticas**
+-   El segundo teorema del bienestar en la practica no puede llevarse a cabo porque:
+    1.  Es inequitativo
+    2.  Seria ineficiente y no equitativo
+    3.  no es posible observar las dotaciones de todos los individuos
+    4.  transferir dotaciones no es posible
+    5.  **opción 3 y 4**
+-   En el modelo de equilibrio con política ex -post(unidad 1), dados los individuos A y B.Con un $\alpha>\ 0.5$ el cual corresponde al individuo $A$la función de utilidad del planificidador social aumenta cuando:
+    1.  $\lambda$ aumenta
+    2.  $\beta_A$ aumenta
+    3.  $(1-\lambda)$ aumenta
+    4.  $\beta_B$ aumenta
+
+## Verdaderos o falso
+
+-   La política económica es el resultado de equilibrio de un juego cooperativo bien definido, bajo supuestos primitivos sobre el comportamiento económico y político. **F**
+
+# Unidad 2
+
+## Choise
+
+-   El votante racional es aquel que sus preferencias cumplen con las condiciones de:
+
+    1.  Completas, transitivas y monotonas
+    2.  Completas y monotonas
+    3.  monotonas y transitivas
+    4.  **transitivas y completas**
+
+-   borda, segun las siguientes preferencias:
+
+    -   (73 personas) $A>B>C>D$
+    -   (84 personas) $B>C>A>D$
+    -   (72 personas) $C>A>B>D$
+
+    1.  cumple respecto a la propiedad de IAI respesto a la opcion D? **SI**
+    2.  hay un ganador de condorcet?
+
+## Verdaderos o falso
+
+-   Para que haya un ganador en una votacion por pluralidad, siempre es requisito necesario que la cantidad de votantes sea impar. **F**
+-   para el caso de una eleccion entre 3 alternativas el teorena de may establece que la votacion por mayoria absoluta cumple con los requisitos de anonimidad, monotonicidad y neutralidad. **F**
+
+
+## Elección por votación
+
+En un caso de homicidio con **cuatro acusados** es necesario decidir quién es el verdadero culpable.  
+La elección habitualmente estaría en manos de un **jurado**, donde cada miembro tiende a votar más correctamente que incorrectamente.  
+
+Suponga que usted es el **JUEZ**, y que al igual que los miembros del jurado tiende a votar más correctamente que incorrectamente y posee exactamente la misma información que ellos.  
+
+
+---
+
+### Preferencias del jurado
+
+Para tomar la decisión correcta el jurado utiliza el **método de Condorcet** para definir al culpable, donde la primera elección representa al culpable.
+
+| Votantes  | Preferencias (1ª → 2ª → 3ª) |
+|-----------|-----------------------------|
+| 7         | A → D → B → C               |
+| 5         | C → D → B → A               |
+| 11        | B → C → A → D               |
+
+---
+
+### Pregunta
+
+1. Si lo único que le interesa es estar lo más cerca posible de la decisión correcta, ¿**preferiría decidir usted mismo o delegar la decisión al jurado**?
+2. Si delega en el jurado, determine el ganador según el **método de Condorcet**.  
+3. Ahora bien, si decide **intervenir en la votación para que el acusado D sea declarado culpable**, ¿cómo podría hacerlo?
+4. 2. Si delega en el jurado, determine el ganador según el **método de Borda**.
+
+### Respuestas
+
+1. Por teorema del Jurado, las probabilidades de elegir correctamente, cuando los votantes tienden a elegir mas correcta que incorrectamente, se maximizan agregando votantes, por lo que es preferible que la decision la tome el jurado.
+
+2. Depende de la agenda. 
+
+- A vs B gana B
+- B vs C gana B
+- B vs D gana D
+- D vs A gana A
+- D vs C gana C
+- A vs C gana C
+
+3. Para que gane D, es necesario que compita en el ultimo enfrentamiento de a pares.
+
+4. con el metodo de borda (ranking "n"):
+
+- A = 62 votos
+- **B** = 68 votos
+- C = 60 votos
+
+
+
+
+
+

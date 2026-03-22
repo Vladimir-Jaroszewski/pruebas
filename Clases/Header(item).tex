@@ -1,0 +1,35 @@
+\usepackage{tikz}
+\usepackage{caption}
+\setbeamertemplate{itemize item}{\textbullet} % Cambiar el símbolo de ítem a punto
+\setbeamertemplate{itemize subitem}{\textbullet} % Cambiar el símbolo de subítem a triángulo negro
+\setbeamertemplate{itemize subitem}{\blacktriangleright}
+\setbeamercolor{frametitle}{bg=blue!20, fg=black}  % Color del título de las diapositivas
+% Definición del bloque
+\newtcolorbox{myblock}[2][]{colback=blue!80!black!9, colframe=blue!100!black!15,
+    fonttitle=\color{black}\bfseries, title=#2, #1, rounded corners=all, boxrule=0.8mm}
+\setbeamercolor{frametitle}{bg=blue!20, fg=black}  % Color del título de las diapositivas
+\usepackage{fancybox}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+## Ejemplo de Lista
+
+\begin{itemize}
+    \item[$\blacktriangleright$] Tercera identidad macroeconómica:
+    \item[$\blacktriangleright$] Cuarta identidad macroeconómica:
+    \item[$\blacktriangleright$] Quinta identidad macroeconómica:
+\end{itemize}
+
+
+% Definición del bloque
+\newtcolorbox{myblock}[2][]{colback=blue!4, colframe=blue!15,
+    fonttitle=\color{black}\bfseries, title=#2, #1, rounded corners=all, boxrule=0.8mm}
+\setbeamercolor{frametitle}{bg=blue!15, fg=black}  % Color del título de las diapositivas
+
+% Comando para subtítulos sin recuadro
+\newcommand{\mySubtitle}[1]{%
+  \vspace{0.5cm} % Espacio antes del subtítulo
+  \textnormal{\large \textbf{#1}} % Ajustar el formato que desees
+  \vspace{0.5cm} % Espacio después del subtítulo
+}

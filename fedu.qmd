@@ -1,0 +1,200 @@
+---
+title: "Modelo de economía abierta"
+format: beamer
+header-includes:
+  - \input{header(graficos).tex} 
+---
+
+\begin{columns}
+    \begin{column}{0.6\textwidth} % Ancho del primer columna para el gráfico
+        \begin{tikzpicture}[scale=1]
+            % Ejes
+            \draw[->] (0,0) -- (0,4) node[above] {$Y_1$};
+            \draw[->] (0,0) -- (5,0) node[right] {$Y_2$};
+
+            % Curvas de indiferencia
+            \draw[domain=0.8:4, smooth, variable=\x] plot ({\x},{3.5/\x}) node[right] {$u_{LC}$};
+            \draw[domain=0.8:4, smooth, variable=\x] plot ({\x},{2.5/\x}) node[right] {$u_{A}$};
+
+            % Recta de presupuesto
+            \draw[red] (0,3.5) -- (4,0);
+
+            % Etiquetas
+            \fill[blue] (2, 1.75) circle (2pt);
+            \node at (2.2, 1.95) {A};
+        \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.35\textwidth} % Ancho de la segunda columna para el texto
+        \captionof{figure}{Este gráfico representa las curvas de indiferencia y la recta de presupuesto de una economía abierta.}
+    \end{column}
+\end{columns}
+
+# 
+
+
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+        % Aquí va tu primera tabla
+        \begin{table}
+            \centering
+            \caption{Tabla 1: Gobierno}
+            \begin{tabular}{ll}
+                \multicolumn{2}{l}{Gobierno}                          \\ \hline
+                \multicolumn{1}{l|}{\textbf{Usos}} & \textbf{Fuentes} \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+            \end{tabular}
+        \end{table}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+        % Aquí va tu segunda tabla
+        \begin{table}
+            \centering
+            \caption{Tabla 2: Gobierno}
+            \begin{tabular}{ll}
+                \multicolumn{2}{l}{Gobierno}                          \\ \hline
+                \multicolumn{1}{l|}{\textbf{Usos}} & \textbf{Fuentes} \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+                \multicolumn{1}{l|}{}              &                  \\ \hline
+            \end{tabular}
+        \end{table}
+    \end{column}
+\end{columns}
+
+
+
+\mySubtitle{Título de Subtítulo}
+
+
+# Ley de Oferta
+\begin{block}{Teorema (Ley de Oferta)}
+Para todo par de precios \( p, p' \geq 0 \), tal que \( p \neq p' \), la oferta de la firma verifica:
+\[
+(p - p') [ y(p) - y(p')] \geq 0
+\]
+\end{block}
+
+# 
+\begin{center}
+\textbf{Tiempos del juego}
+\end{center}
+\begin{center}  % Añadido para centrar el gráfico
+\begin{tikzpicture}
+    % Dibuja la línea horizontal
+    \draw[thick] (0,0) -- (10.4,0);
+    
+    % Marcas en la línea de tiempo
+    \foreach \x in {0, 1, 2, 3}
+        \draw (\x*3.33, 0.1) -- (\x*3.33, -0.1);
+    
+    % Puntos de tiempo
+    \node at (0, -0.3) {0};
+    \node at (3.33, -0.3) {1};
+    \node at (6.66, -0.3) {2};
+    \node at (10, -0.3) {3};
+    \node at (10.6, 0) {t};
+    
+    % Etiqueta de Elección y flecha
+    \node at (4.5, 1) {Elección};
+    \draw[->] (4.5, 0.8) -- (4.5, 0.1);
+\end{tikzpicture}
+\end{center}  
+
+
+\begin{columns}
+    \begin{column}{0.25\textwidth}
+        \begin{itemize}
+            \item Candidatos anuncian los gastos  $V^k$.
+            \item Decisiones privadas de IGs sobre las contribuciones de campaña $C_i$.
+        \end{itemize}
+    \end{column}
+
+    \begin{column}{0.25\textwidth}
+        \begin{itemize}
+            \item De ejecutan contribuciones de campaña y se observan por IGs rivales.
+        \end{itemize}
+    \end{column}
+
+    \begin{column}{0.25\textwidth}
+        \begin{itemize}
+            \item Candidato electo asume el cargo.
+            \item Decisiones privadas de los IGs sobre las contribuciones de cabildeo $L_i$ de IGs rivales.
+        \end{itemize}
+    \end{column}
+
+    \begin{column}{0.25\textwidth}
+        \begin{itemize}
+            \item Las políticas del gobierno se ejecutan.
+            \item Se entrega el pago $V_k$.
+        \end{itemize}
+    \end{column}
+\end{columns}
+
+# 
+ \begin{table}[ht]
+\begin{center}
+\textbf{Regla (V) de asignacion del gasto  ($\alpha^k$)} \\
+\vspace{3 mm}
+\begin{tabular}[t]{l |c |c}
+     &   $C_i = C^k_i$   &    $C_i \neq C^k_i$   \\
+\hline
+$C_j = C^k_j$ &   $\frac{L^k_i + C_i}{L^k_i + L^k_j + C_i + C_j}$  & $\frac{L^k_i }{L^k_i + L^k_j + C_j}$ \\
+\hline
+$C_j \neq C^k_j$ &   $\frac{L^k_i + C_i}{L^k_i + L^k_j + C_i}$  & $\frac{L^k_i }{L^k_i + L^k_j}$ \\
+\end{tabular}
+\caption{\scriptsize En columnas: Casos en los cuales el camdidato apoyado $i$ gana y pierde las elecciones, $C_i = C^k_i$ y $C_i \neq C^k_i$ respectivamente.  En filas, casos en que el candidato apoyado por $j$gana y pierde las elecciones $C_j = C^k_j$ y $C_j \neq C^k_j$ respectivamente. Cada elemento de la matriz indica el valor de $\alpha^k$ de la combinación de esos escenarios.}
+\end{center}
+\end{table}
+
+# 
+\begin{eqnarray} \nonumber
+C^{*}_{i} = \left\{ \begin{array}{lll}
+\vspace{1 mm}
+\hspace{1 mm} C(V^A) & \hspace{1 mm} , \hspace{1 mm} if:\ V^A < \check{V}^A \\
+\vspace{2 mm}
+\frac{1}{2} - \frac{1}{4}  \left(  V^A -  V^B \right)  &  \hspace{1 mm} , \hspace{1 mm} if:\ V^A \in \left( \check{V}^A , \hat{V}^A  \right) &,for: \ i=1,2 \wedge i \neq j \\
+\hspace{ 3 mm} 0 & \hspace{1 mm} , \hspace{2 mm} if:\ V^A > \hat{V}^A \\
+ \end{array}
+    \right.  
+\end{eqnarray}
+
+# 
+\begin{figure}[ht]
+    \vspace{4 mm}
+    \begin{center}
+        \textbf{Reaction function for ex-post lobby contribution}
+    \end{center}
+    \begin{minipage}[b]{0.45\linewidth}
+        \includegraphics[width=\linewidth]{RF33}  % Omití la altura para mantener la relación de aspecto
+    \end{minipage}
+    \hspace{0.05\linewidth}  % Espacio entre las imágenes
+    \begin{minipage}[b]{0.45\linewidth}
+        \includegraphics[width=\linewidth]{RF444}  % Omití la altura para mantener la relación de aspecto
+    \end{minipage}
+\end{figure}
+
+# 
+\begin{figure}[ht]
+\vspace{ 4 mm}
+\begin{center}
+\textbf{Optimal contributive behavior}
+\end{center}
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[width=1\linewidth, height=0.65\textwidth]{optimo_A}
+\end{minipage}
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[width=1\linewidth, height=0.65\textwidth]{optimo_B}
+\end{minipage}
+  \caption{\scriptsize Optimal distribution of campaign and lobby contributions to the favorite candidate $A$ in terms of the announced payoff $V^A$ (Left), and optimal lobby contribution for the opposite candidate in terms of the announced payoff $V^B$ (Right).}
+%\vspace{5 mm}
+\end{figure}
+
+
+
+
+

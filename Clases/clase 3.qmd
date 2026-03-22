@@ -1,0 +1,199 @@
+---
+title: "Programación Económica y Contabilidad Social"
+subtitle: "Tercera Clase"
+author: "Vladimir Jaroszewski"
+format: beamer
+theme: Boadilla
+header-includes:
+  - \input{header(graficos).tex}
+toc: TRUE
+toc-title: "Indice"
+---
+
+# Modelos de Decisión 
+## Modelos de Decisión
+
+**Los modelos de decisión** se basan en la noción de modelo, indican los efectos de políticas economicas. Tinbergen, Jan "On the theory o economic policy"(1955)
+
+### Frish estipula 4 fases:
+
+1.  **Metodo del espectador:** Observar, extrapolar la evolucion de los hechos económicos.
+
+2.  **Instrumentos ad-hoc:** Instrumentos ad-hoc que podrian ser utilizados.
+
+3.  **Instrumentos de uso posible:** Se especifica que instrumento utilizar.
+
+4.  **Optimización:** Se optimiza una función de bienestar social (Sa. restricciones).
+
+# Las políticas Económicas 
+
+### Tres tipos de politicas economicas:
+
+1.  Reformas: Modifican sustancialmente la base económica de la sociedad.
+
+2.  Políticas Cualitativas: Cambios de menor magnitud, ejemplo leyes.
+
+3.  Políticas Cuantitativas: Se busca lograr un objetivo cuantitativo mediante un política.
+
+\
+Los modelos de decisión apuntan a $\longrightarrow$ **Políticas Cuantitativas**.
+
+## Modelo de Politicas Cuantitativas:
+
+$$Las Politicas Economicas \begin{aligned}
+&\longrightarrow instrumentos\\ &\longrightarrow Objetivos
+\end{aligned}
+$$\
+
+El modelo se basa en:
+
+Instrumentos $(X_i)$ $\longrightarrow$ Ecuaciones $\longrightarrow$ Objetivos $(Y_i)$
+
+\
+**Tipos de Políticas Cuantitativas:**
+
+a.  Política Económica de Corto Plazo: Como planes de estabilización
+
+b.  Política Económica de Largo Plazo: Tal como el crecimiento económico
+
+## Ecuaciones del modelo
+
+- Ecuaciones de Comportamiento: $C=\alpha+cY$ \vspace{0.3cm} 
+
+- Ecuaciones Tecnológicas: $Y=A L^{\alpha} K^{1-\alpha}$, $PMe$ \vspace{0.3cm} 
+
+- Ecuaciones Institucionales: Impuesto al trabajo $AL=\alpha L.W$\vspace{0.3cm} 
+
+- Ecuaciones de Definición: $Y=C+G+X-M$
+
+# Formulacion de Politicas Economicas
+
+## Modelo de Tirbergen o de Objetivos Fijos:
+
+\
+**Cada objetivo debe tener un instrumento**
+
+\
+se parte de: $\Phi_n[x_i, y_i, z_i, \mu_i]$
+
+\
+Donde:
+
+- $x_i$: Variables irrelevantes $i$: 1,...,$I$ (endógenas) \vspace{0.3cm} 
+
+
+- $y_i$: Variables instrumentos $k$: 1,...,$K$ (exógenas) \vspace{0.3cm} 
+
+
+- $z_i$: Variables metas u objetivos $j$: 1,...,$J$ (endógenas) \vspace{0.3cm} 
+
+
+- $\mu_i$: Variables datos (predeterminados) $l$: 1,...,$L$ (exógenas)
+
+
+## Resolución de sistema de ecuaciones
+
+Se busca resolver un **sistema de** $N$ ecuaciones independientes: \vspace{0.3cm} 
+
+
+a. **Enfoque Científico:** Tiene solución si $\longrightarrow$ $N=J+I$
+
+Donde $J$ es la cantidad de variables metas y $I$ es la cantidad de variables irrelevantes, las cuales ambas son endogenas. \vspace{0.5cm} 
+
+*¿Es un modelo puramente matemático o tiene significado científico?*
+
+##
+
+b.  **Enfoque de Política Económica:** Tiene solucion si $\longrightarrow$ $N=K+I$
+
+Donde $K$ es la cantidad de variables instrumento y $I$ es la cantidad de variables irrelevantes
+
+Teniendo por ambos enfoques: $$
+\begin{aligned}
+&N=J+I\\ &N=K+I \\  
+& \  \fbox{J = K} \
+\end{aligned}
+$$ 
+
+**El resultado de Timbergen indica que el numero de instrumentos, debe ser igual al numero de objetivos.**
+
+## Modelo De Theil o de Objetivos Flexibles
+
+\vspace{0.2cm} 
+
+Se maximiza una funcione de bienes social sujeto a restricciones, las cuales manifiestan la estructura de la economia.
+
+\vspace{0.3cm} 
+
+**Problema del Policy Marker:** $$
+\begin{aligned}
+Min\ L_{(x)}&=\alpha_1\ (Y-Y^*)^2\ +\alpha_2\ (X-X^*)^2 
+\\ &Sa . \ Restriccion.
+\end{aligned}
+$$\
+
+Donde: $(Y-Y^*)^2$ es la desviacion entre las metas observadas y y deseadas. Mientras que $(X-X^*)^2$ corresponde a la diferencia entre los instrumentos observados y deseados.
+
+Siendo $\alpha_1+\alpha_2=1$ siendo cada una la ponderación que asigna el Policy marker a los objetivos o a los instrumentos.
+
+## Modelo De Theil o de Objetivos Flexibles (Cont.)
+
+La ponderación $\alpha_{1,2}$ dependerá de los costos de los instrumentos, siendo que a mayores costos le asignara una mayor ponderación en la función objetivo.
+
+Considerando una restriccion como: $Y=\alpha+\beta X$
+
+\vspace{0.2cm}
+
+**Problema del Policy Maker es:** 
+
+$$
+\begin{aligned}
+Min\ L_{(x)}&=\alpha_1\ (Y-Y^*)^2\ +\alpha_2\ (X-X^*)^2 
+\\Sa . \ Y&=a+b X
+\end{aligned} \tag{1}
+$$
+
+## Resolucion del Problema del Policy Maker
+
+Colapsando la restriccion en la ecuacion principal en $(1)$:
+
+$$
+Min_{(x)}\ L=\alpha_1(a+bY-Y^*)^2+\alpha_2(X-X^*)^2
+$$ CPO: $$
+\frac{dL}{dX}=2\ \alpha_1\ b\ X(a+bY-Y^*)+2\ \alpha_2(X-X^*)=0
+$$
+
+Despejando:
+$$
+X=\frac{\alpha_1\ b(Y^*-a)+\alpha_2\ X^*}{\alpha_1\ b^2+ \alpha_2} 
+$$
+
+En el caso particular en donde solo sea importante alzanzar los objetivos(o que los instrumentos no tienen costos) $\alpha_1=1$ y $\alpha_2=0$ 
+
+entonces: \fbox{$X=\frac{Y^*-a}{b}$}
+
+## Ejemplo del modelo de Timbergen
+
+\begin{columns}
+    \begin{column}{0.6\textwidth}
+  \begin{tikzpicture}[scale=1]
+            % Ejes
+            \draw[->] (0,0) -- (0,5) node[above] {$\pi$};
+            \draw[->] (0,0) -- (5,0) node[right] {$\mu$};
+
+            % Curvas de indiferencia
+            \draw[domain=0.8:4, smooth, variable=\x] plot ({\x},{3.5/\x}) node[right] {$C_{PH}$};
+            % Etiquetas
+            \fill[blue] (2, 1.75) circle (2pt);
+            \node at (2.2, 1.95) {A};
+      % Líneas punteadas hacia los ejes
+            \draw[dashed] (2, 1.75) -- (2, 0) node[below] {$\mu_0$};  % Línea vertical hasta el eje x
+            \draw[dashed] (2, 1.75) -- (0, 1.75) node[left] {$\pi_0$};  % Línea horizontal hasta el eje y
+\end{tikzpicture}
+    \end{column}
+    \begin{column}{0.35\textwidth} % Ancho de la segunda columna para el texto
+        \captionof{figure}{Explicacion del grafico.}
+    \end{column}
+\end{columns}
+
+
